@@ -8,3 +8,16 @@ plugins:
 #  - schema_reader:
 #      include:
 #        - "./docs/GeoCODES-Metadata/schemas/"
+  - multirepo:
+      # (optional) tells multirepo to cleanup the temporary directory after site is built.
+      cleanup: true
+      repos:
+        - section: Geocodes
+          # you can define the edit uri path
+          import_url: 'https://github.com/earthcube/geocodes?edit_uri=/blob/master/'
+        - section: Metadata
+          import_url: 'https://github.com/earthcube/GeoCODES-Metadata?edit_uri=/blob/master/'
+        - section: Gleaner - Gather JSONLD
+          import_url: 'https://github.com/gleanerio/gleaner?edit_uri=/blob/master/'
+        - section: Nabu - Push to Triplestore
+          import_url: 'https://github.com/gleanerio/nabu?edit_uri=/blob/master/'
