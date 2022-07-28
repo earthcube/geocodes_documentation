@@ -16,7 +16,7 @@ jobs:
         with:
           repository: earthcube/geocodes
           path: docs/geocodes
-      - run: cd docs/geocodes && rm -rf !(docs)
+      - run: cd docs/geocodes && rm -rf "!(docs)"
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
