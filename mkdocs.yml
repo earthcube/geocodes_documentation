@@ -1,0 +1,23 @@
+site_name: Geocodes Documentation
+#theme: 'material'
+#theme: 'mkdocs'
+theme: 'readthedocs'
+plugins:
+  - search
+  - multirepo:
+      # (optional) tells multirepo to cleanup the temporary directory after site is built.
+      cleanup: true
+      repos:
+        - section: Geocodes
+          # you can define the edit uri path
+          import_url: 'https://github.com/earthcube/geocodes?branch=main'
+        - section: Metadata
+          import_url: 'https://github.com/earthcube/GeoCODES-Metadata?branch=main'
+        - section: Gleaner
+          import_url: 'https://github.com/gleanerio/gleaner?branch=master'
+        - section: Nabu
+          import_url: 'https://github.com/gleanerio/nabu?branch=master'
+  # get a NoneType error, even when trying to generate in Geocodes-Metadata
+#  - schema_reader:
+#      include:
+#        - "./docs/GeoCODES-Metadata/schemas/"
