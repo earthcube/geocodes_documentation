@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - dev
+      - dev_multirepo
 jobs:
   deploy:
     runs-on: ubuntu-latest
