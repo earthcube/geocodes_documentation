@@ -10,13 +10,13 @@ plugins:
       repos:
         - section: Geocodes
           # you can define the edit uri path
-          import_url: 'https://github.com/earthcube/geocodes'
+          import_url: 'https://github.com/earthcube/geocodes?branch=main'
         - section: Metadata
-          import_url: 'https://github.com/earthcube/GeoCODES-Metadata'
+          import_url: 'https://github.com/earthcube/GeoCODES-Metadata?branch=main'
         - section: Gleaner
-          import_url: 'https://github.com/gleanerio/gleaner'
+          import_url: 'https://github.com/gleanerio/gleaner?branch=master'
         - section: Nabu
-          import_url: 'https://github.com/gleanerio/nabu'
+          import_url: 'https://github.com/gleanerio/nabu?branch=master'
   # get a NoneType error, even when trying to generate in Geocodes-Metadata
 #  - schema_reader:
 #      include:
