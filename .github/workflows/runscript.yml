@@ -19,6 +19,28 @@ jobs:
           repository: earthcube/geocodes
           path: docs/geocodes
       - run: cd docs/geocodes && rm -rf "!(docs)" && cd ..
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: earthcube/GeoCODES-Metadata
+          path: docs/GeoCODES-Metadata
+      - run: cd docs/GeoCODES-Metadata && rm -rf "!(docs)" && cd ..
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: gleanerio/gleaner
+          path: docs/gleaner
+      - run: cd docs/gleaner && rm -rf "!(docs)" && cd ..
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: gleanerio/nabu
+          path: docs/nabu
+      - run: cd docs/nabu && rm -rf "!(docs)" && cd ..
+
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
