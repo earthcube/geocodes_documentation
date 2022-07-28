@@ -16,10 +16,10 @@ jobs:
         with:
           repository: earthcube/geocodes
           path: docs/geocodes
-      - run: cd docs/geocodes && rm -rf "!(docs)"
+      - run: cd docs/geocodes && rm -rf "!(docs)" && cd ..
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
       - run: pip install mkdocs
-      - run: mkdocs gh-deploy --force --clean --verbose
+      - run: cd docs/ && mkdocs gh-deploy --force --clean --verbose
 
