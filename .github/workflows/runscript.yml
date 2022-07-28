@@ -45,6 +45,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs
+      - run: pip install mkdocs-schema-reader
  #     - run: cd docs/ && mkdocs gh-deploy --force --clean --verbose
       - run:  mkdocs gh-deploy --force --clean --verbose
 

@@ -1,3 +1,10 @@
 site_name: Geocodes Documentation
 #theme: 'material'
-theme: 'mkdocs'
+#theme: 'mkdocs'
+theme: 'readthedocs'
+plugins:
+  - search
+  - schema_reader:
+      include:
+        - "docs/GeoCODES-Metadata//GeoCodesDataset-schema.json"
+        - "docs//GeoCODES-Metadata/GeoCodes-ECRR-DatasetSchema.json"
