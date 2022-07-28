@@ -10,15 +10,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          path: main
 # no cleaup needed
       - name: Checkout
         uses: actions/checkout@v3
         with:
           repository: earthcube/geocodes
           path: docs/geocodes
-
+      - run: cd docs/geocodes && rm -rf !(docs)
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
