@@ -10,6 +10,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs
+      - run: pip install mkdocs-schema-reader
       - name: Checkout
         uses: actions/checkout@v3
 # no cleaup needed
@@ -41,11 +46,7 @@ jobs:
           path: docs/nabu
       - run: cd docs/nabu && rm -rf '!(docs)' && cd ..
 
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-      - run: pip install mkdocs
-      - run: pip install mkdocs-schema-reader
+
  #     - run: cd docs/ && mkdocs gh-deploy --force --clean --verbose
       - run:  mkdocs gh-deploy --force --clean --verbose
 
