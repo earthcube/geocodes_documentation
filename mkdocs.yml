@@ -1,2 +1,3 @@
 site_name: Geocodes Documentation
-theme: 'material'
+#theme: 'material'
+theme: 'mkdocs'
