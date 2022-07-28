@@ -6,4 +6,4 @@ plugins:
   - search
   - schema_reader:
       include:
-        - "docs/GeoCODES-Metadata/schemas/"
+        - "./docs/GeoCODES-Metadata/schemas/"
