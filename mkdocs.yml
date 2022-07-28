@@ -4,6 +4,7 @@ site_name: Geocodes Documentation
 theme: 'readthedocs'
 plugins:
   - search
-  - schema_reader:
-      include:
-        - "./docs/GeoCODES-Metadata/schemas/"
+ # get a NoneType error, even when trying to generate in Geocodes-Metadata
+#  - schema_reader:
+#      include:
+#        - "./docs/GeoCODES-Metadata/schemas/"
