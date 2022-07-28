@@ -30,7 +30,8 @@ jobs:
         with:
           repository: earthcube/GeoCODES-Metadata
           path: docs/GeoCODES-Metadata
-      - run: cd docs/GeoCODES-Metadata && rm -rf '!(docs)' && cd ..
+      - run: cd docs/GeoCODES-Metadata && rm -rf archive && cd ..
+#      - run: cd docs/GeoCODES-Metadata && rm -rf '!(docs)' && cd ..
 
       - name: Checkout
         uses: actions/checkout@v3
