@@ -6,5 +6,4 @@ plugins:
   - search
   - schema_reader:
       include:
-        - "docs/GeoCODES-Metadata/GeoCodesDataset-schema.json"
-        - "docs/GeoCODES-Metadata/GeoCodes-ECRR-DatasetSchema.json"
+        - "docs/GeoCODES-Metadata/schemas/"
