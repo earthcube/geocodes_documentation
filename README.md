@@ -2,17 +2,15 @@
 
 [Github io](https://earthcube.github.io/geocodes_documentation/)
 
-To add a reposiroty to this GH Pages, 
+To add a repository to this GH Pages, 
 * clone
-* edit .github/workflows/runscript.yml and add the repo to the list of checked out items
+* uses .github/workflows/runscript.yml 
+* add to mkdocs.yml/multirepo/repos  the new repo
 ```yaml
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          repository: earthcube/GeoCODES-Metadata
-          path: docs/GeoCODES-Metadata
-      - run: cd docs/GeoCODES-Metadata && rm -rf "!(docs)" && cd ..
+             - section: Nabu
+             import_url: 'https://github.com/gleanerio/nabu?branch=master'
 ```
+Using the MkDocs plugin: https://github.com/jdoiro3/mkdocs-multirepo-plugin
 
 =====
 
