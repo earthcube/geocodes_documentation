@@ -1,4 +1,4 @@
-site_name: Geocodes Documentation
+site_name: Earthcube Infrastructure Documentation
 #theme: 'material'
 #theme: 'mkdocs'
 theme: 'readthedocs'
@@ -25,9 +25,9 @@ nav:
   - Home: index.md
   - Developers: '/developers/'
   - Geocodes: '!import https://github.com/earthcube/geocodes?branch=doctest&docs_dir=docs&config=mkdocs.yml'
-  - Metadata: '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
-  - Indexing:
-    - Gleaner: '!import https://github.com/gleanerio/gleaner?branch=master'
-    - Nabu: '!import https://github.com/gleanerio/nabu?branch=master'
-  - User Interface:
-      - Facetsearch: "https://github.com/earthcube/facetsearch"
+#  - Metadata: '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
+#  - Indexing:
+#    - Gleaner: '!import https://github.com/gleanerio/gleaner?branch=master'
+#    - Nabu: '!import https://github.com/gleanerio/nabu?branch=master'
+#  - User Interface:
+#      - Facetsearch: "https://github.com/earthcube/facetsearch"
