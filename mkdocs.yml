@@ -4,6 +4,7 @@ site_name: Earthcube Infrastructure Documentation
 theme: 'readthedocs'
 plugins:
   - search
+  - literate-nav
   - multirepo:
       # (optional) tells multirepo to cleanup the temporary directory after site is built.
       cleanup: true
