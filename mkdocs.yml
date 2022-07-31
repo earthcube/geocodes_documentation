@@ -16,7 +16,7 @@ plugins:
 nav:
   - Home: index.md
   - Developers: '/developers/'
-  - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=doctest&docs_dir=docs&config=mkdocs.yml'
+  - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
   - Metadata:  '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
   - Indexing:
     - Gleaner: '!import https://github.com/gleanerio/gleaner?branch=dev_docs'
