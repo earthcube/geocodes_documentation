@@ -19,8 +19,8 @@ nav:
   - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
   - Metadata:  '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
   - Indexing:
-    - Gleaner: '!import https://github.com/gleanerio/gleaner?branch=dev_docs'
-    - Nabu: '!import https://github.com/gleanerio/nabu?branch=dev_docs'
+    - Gleaner: '!import https://github.com/gleanerio/gleaner?branch=dev'
+    - Nabu: '!import https://github.com/gleanerio/nabu?branch=dev'
   - User Interface:
       - Facetsearch: "https://geocodes.earthcube.org/#/landing"
       - repository:  "https://github.com/earthcube/facetsearch"
