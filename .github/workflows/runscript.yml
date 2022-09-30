@@ -18,6 +18,7 @@ jobs:
 #      - run: pip install mkdocs-schema-reader
       - run: pip install mkdocs-multirepo-plugin
       - run: pip install mkdocs-literate-nav
+      - run: pip install md-mermaid
       - name: Checkout
         uses: actions/checkout@v3
 ## no cleaup needed
