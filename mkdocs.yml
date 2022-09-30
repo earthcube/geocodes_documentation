@@ -8,7 +8,7 @@ plugins:
   - multirepo:
       # (optional) tells multirepo to cleanup the temporary directory after site is built.
       cleanup: true
-  -  md-mermaid
+  -  mermaid2
   - literate-nav
   # get a NoneType error, even when trying to generate in Geocodes-Metadata
 #  - schema_reader:
