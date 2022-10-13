@@ -12,9 +12,11 @@ To add a repository to this GH Pages,
 ```
 Using the MkDocs plugin: https://github.com/jdoiro3/mkdocs-multirepo-plugin
 
+see docs/developers/addingdocumentation.md
+
 =====
 
-This_ repository is for documentation on the GeoCodes technolgoy stack and production operation of the Gleaner-Nabu-GeoCodes UI workflow.
+This_ repository is for documentation on the GeoCodes technology stack and production operation of the Gleaner-Nabu-GeoCodes UI workflow.
 
 # Crawling and indexing the metadata, with [gleaner](https://github.com/earthcube/geocodes/blob/main/docs/indexing_with_gleanerio.md)
 
