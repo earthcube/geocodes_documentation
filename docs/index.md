@@ -1,7 +1,8 @@
 #  Geocodes Documentation
 
-Starting points:
 
+Starting points:
+* [Examples](examples/)
 * [Services Infrastructure, aka Production](services-infrastructure/)
 * Loading and indexing
   * [Gleaner- Harvesting JSONLD](indexing/gleaner/)
