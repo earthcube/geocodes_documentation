@@ -7,8 +7,10 @@ To add a new section, you add an import to the nav section based on: https://git
 
 In your repo, you add a mkdocs.
 
+## [Markup cheat sheet ](https://yakworks.github.io/docmark/cheat-sheet/)
 
 # MKDOCS References
+
 Mkdocs on github how tos:
 
 * [example](https://multirepo-docs.github.io/root-docs/developers/contributing/)
