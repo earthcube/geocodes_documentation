@@ -3,7 +3,10 @@
 
 Starting points:
 
-* [Examples](examples/)
+* Examples
+  * [Geocodes](examples/geocodes.md)
+  * [Developement](examples/developement/)
+  * [Community](examples/community/)
 * [Services Infrastructure, aka Production](services-infrastructure/)
 * Loading and indexing
   * [Gleaner- Harvesting JSONLD](indexing/gleaner/)
