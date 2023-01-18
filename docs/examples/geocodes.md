@@ -6,9 +6,7 @@
 
 * [Production](https://geocodes.earthcube.org/)
 
-Sources:
-At present the sources for this are a curated list of repositories in a google sheet
 
-Running on : Portainer.geocodes-1.earthcube.org 
-openstack: SDSC
+* Running on : Portainer.geocodes-1.earthcube.org 
+* openstack: SDSC
 
