@@ -16,7 +16,10 @@ plugins:
 #        - "./docs/GeoCODES-Metadata/schemas/"
 nav:
   - Home: index.md
-  - Examples: '/examples/'
+  - Examples:
+    - Geocodes: '/examples/geocodes.md'
+    - Developement: '/examples/developement/'
+    - Community: '/examples/community/'
   - Developers: '/developers/'
   - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
   - Metadata:  '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
