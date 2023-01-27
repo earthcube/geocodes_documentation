@@ -1,7 +1,25 @@
 site_name: Earthcube Infrastructure Documentation
 #theme: 'material'
 #theme: 'mkdocs'
-theme: 'readthedocs'
+theme:
+  name: material
+#  name: 'readthedocs'
+  features:
+    #    - content.code.copy
+    - navigation.sections
+markdown_extensions:
+  - toc:
+      permalink: 
+  - attr_list
+  - def_list
+  - tables
+  - pymdownx.highlight:
+      use_pygments: false
+  - admonition
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.superfences
+
 plugins:
   - search
 # literate_nav must load after multirepo for the features to be available.
@@ -10,6 +28,8 @@ plugins:
       cleanup: true
   -  mermaid2
   - literate-nav
+  -  mkdocs-jupyter
+  - callouts
   # get a NoneType error, even when trying to generate in Geocodes-Metadata
 #  - schema_reader:
 #      include:

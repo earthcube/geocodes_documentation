@@ -9,6 +9,12 @@ In your repo, you add a mkdocs.
 
 ## [Markup cheat sheet ](https://yakworks.github.io/docmark/cheat-sheet/)
 
+!!! note 
+    We are using mkdocs, so [admonitions](https://pypi.org/project/mkdocs-callouts/)
+    and [pymarkdown extensions](https://python-markdown.github.io/extensions/)
+    but the pymarkdown stuff needs to be ebabled: https://pypi.org/project/mkdocs-callouts/
+https://squidfunk.github.io/mkdocs-material/reference/admonitions/#configuration
+
 # MKDOCS References
 
 Mkdocs on github how tos:
