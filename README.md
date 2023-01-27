@@ -24,7 +24,7 @@ This_ repository is for documentation on the GeoCodes technology stack and produ
 
 # [utilities](https://github.com/earthcube/earthcube_utilities) used to open.. the (meta)data in notebooks, from the [search](http://geocodes.ddns.net/ec/GeoCODES)
 
-# [Testing](https://github.com/MBcode/ec/blob/master/test/) the [metadata](https://github.com/earthcube/GeoCODES-Metadata) as it goes through the stack
+# [Testing](https://github.com/earthcube/ec/blob/master/test/) the [metadata](https://github.com/earthcube/GeoCODES-Metadata) as it goes through the stack
 
 # GeoCODES container [stack](https://github.com/earthcube/geocodes)
 
