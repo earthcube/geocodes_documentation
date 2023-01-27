@@ -3,12 +3,12 @@
 
 ## Starting points:
 
-### Examples
+### Active Sites
 
 * [Geocodes](examples/geocodes.md)
 * [Developement](examples/developement/)
 * [Community](examples/community/)
-* 
+* [AddTo JSON-LD Editor](https://addto.earthcube.org/#/)
 
 ### Science on Schema Metadata
 
@@ -33,11 +33,8 @@
 * [Earthcube Utilties](https://github.com/earthcube/earthcube_utilities)
 * [JSON-LD Dataset Editor](https://github.com/earthcube/jsonld_forms)
 
-## Active Sites:
 
-* [Geocodes](https://geocodes.earthcube.org/)
-* [Gecodes Dev](https://dev.geocodes.earthcube.org/)
-* [AddTo JSON-LD Editor](https://addto.earthcube.org/#/)
+
 
 
 
