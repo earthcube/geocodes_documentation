@@ -43,7 +43,7 @@ nav:
   - Science On Schema:  '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
   - Earthcube Utilities:
       - Utilities: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=earthcube_utilities/docs&config=earthcube_utilities/mkdocs.yml'
-      - Notebook Proxy: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=notebook_proxy/&config=notebook_proxy/mkdocs.yml'
+ #     - Notebook Proxy: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=notebook_proxy/&config=notebook_proxy/mkdocs.yml'
   - User Interface:
       - Facetsearch:
           - UI: "https://geocodes.earthcube.org/#/landing"
