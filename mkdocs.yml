@@ -60,6 +60,6 @@ nav:
   - Developers:
       - General Developer Information: 'developers/'
       - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
-      - Ingest Orchestration: '!import https://github.com/gleanerio/scheduler.git?branch=dev_docs'
+      - Ingest Orchestration: '!import https://github.com/gleanerio/scheduler.git?branch=dev'
  #     - Integration Testing: '!import https://github.com/earthcube/GeoCODES-Metadata.git?branch=main&docs_dir=integrationtesting/docs&config=integrationtesting/mkdocs.yml'
       - Repositories: "https://github.com/earthcube"
