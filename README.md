@@ -29,3 +29,5 @@ This_ repository is for documentation on the GeoCodes technology stack and produ
 # GeoCODES container [stack](https://github.com/earthcube/geocodes)
 
 # [Editing](https://addto.earthcube.org/#/) json-ld descriptions of resources, with [forms](https://github.com/earthcube/jsonld_forms)
+
+# [Onboarding](https://github.com/earthcube/ec/blob/master/doc/onboarding.md) a new repository
