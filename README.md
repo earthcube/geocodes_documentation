@@ -18,16 +18,10 @@ see docs/developers/addingdocumentation.md
 
 This_ repository is for documentation on the GeoCodes technology stack and production operation of the Gleaner-Nabu-GeoCodes UI workflow.
 
-# Crawling and indexing the metadata, with [gleaner](https://github.com/earthcube/geocodes/blob/main/docs/indexing_with_gleanerio.md)
-
-# [Faceted](https://github.com/earthcube/facetsearch) [search](http://geocodes.ddns.net/ec/GeoCODES) [page](https://dev.geocodes.earthcube.org/)
-
-# [utilities](https://github.com/earthcube/earthcube_utilities) used to open.. the (meta)data in notebooks, from the [search](http://geocodes.ddns.net/ec/GeoCODES)
-
-# [Testing](https://github.com/earthcube/ec/blob/master/test/) the [metadata](https://github.com/earthcube/GeoCODES-Metadata) as it goes through the stack
-
-# GeoCODES container [stack](https://github.com/earthcube/geocodes)
-
-# [Editing](https://addto.earthcube.org/#/) json-ld descriptions of resources, with [forms](https://github.com/earthcube/jsonld_forms)
-
-# [Onboarding](https://github.com/earthcube/ec/blob/master/doc/onboarding.md) a new repository
+* Crawling and indexing the metadata, with [gleaner](https://github.com/earthcube/geocodes/blob/main/docs/indexing_with_gleanerio.md)
+* [Faceted](https://github.com/earthcube/facetsearch) [search](http://geocodes.ddns.net/ec/GeoCODES) [page](https://dev.geocodes.earthcube.org/)
+* [utilities](https://github.com/earthcube/earthcube_utilities) 
+* [Testing](https://github.com/earthcube/ec/blob/master/test/) the [metadata](https://github.com/earthcube/GeoCODES-Metadata) as it goes through the stack
+* GeoCODES container [stack](https://github.com/earthcube/geocodes)
+* [Editing](https://addto.earthcube.org/#/) json-ld descriptions of resources, with [forms](https://github.com/earthcube/jsonld_forms)
+* [Onboarding](https://github.com/earthcube/ec/blob/master/doc/onboarding.md) a new repository
