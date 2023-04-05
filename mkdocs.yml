@@ -80,8 +80,8 @@ nav:
 #      - Nabu: '!import https://github.com/gleanerio/nabu?branch=dev_docs'
       #     - Integration Testing: '!import https://github.com/earthcube/GeoCODES-Metadata.git?branch=main&docs_dir=integrationtesting/docs&config=integrationtesting/mkdocs.yml'
       - Load Data:
-          - Install tool glcon: geocodes/docs/data_loading/install_glcon.md
-          - Load Data: geocodes/docs/data_loading/setup_indexing_with_gleanerio.md
+          - Install tool glcon: geocodes/data_loading/install_glcon.md
+          - Load Data: geocodes/data_loading/setup_indexing_with_gleanerio.md
       - Tools:
         - Gleaner Docs: '!import https://github.com/gleanerio/gleanerdocs.github.io?branch=docs_mkdocs&config=mkdocs_ec.yml'
         - Summarization: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=summarize/docs&config=summarize/mkdocs.yml'
