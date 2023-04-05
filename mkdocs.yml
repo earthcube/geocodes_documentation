@@ -18,8 +18,11 @@ markdown_extensions:
   - admonition
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.superfences
-
+  - pymdownx.superfences:
+    custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
 plugins:
   - search
 # literate_nav must load after multirepo for the features to be available.
@@ -34,6 +37,9 @@ plugins:
 #  - schema_reader:
 #      include:
 #        - "./docs/GeoCODES-Metadata/schemas/"
+#extra_javascript:
+#  - https://unpkg.com/mermaid/dist/mermaid.min.js
+#
 nav:
   - Home: index.md
   - Examples:
