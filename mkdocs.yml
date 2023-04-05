@@ -9,6 +9,7 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.path
+    - navigation.indexes
 markdown_extensions:
   - toc:
       permalink: 
@@ -32,6 +33,10 @@ plugins:
   - multirepo:
       # (optional) tells multirepo to cleanup the temporary directory after site is built.
       cleanup: true
+      nav_repos:
+        - name: geocodes
+          import_url: https://github.com/earthcube/geocodes
+          imports: [docs/data_loading/setup_indexing_with_gleanerio.md,docs/data_loading/install_glcon.md ]
   -  mermaid2
   - literate-nav
   -  mkdocs-jupyter
@@ -49,26 +54,38 @@ nav:
       - Geocodes: 'examples/geocodes.md'
       - Developement: 'examples/developement/'
       - Community: 'examples/community/'
-  - Science On Schema:  '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
-  - Earthcube Utilities:
-      - Utilities: "https://earthcube.github.io/earthcube_utilities/"
- #     - Notebook Proxy: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=notebook_proxy/&config=notebook_proxy/mkdocs.yml'
-  - User Interface:
-      - Facetsearch:
-          - UI: "https://geocodes.earthcube.org/#/landing"
-          - repository: "https://github.com/earthcube/facetsearch"
-  - Resource Management:
-      - JSONLD Forms:
-          - UI: "https://addto.earthcube.org"
-          - repository: "https://github.com/earthcube/jsonld_forms"
+  - Information for Repositories and Users:
+    - Science On Schema:
+        - Earthcube Specifications: '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
+        - Science on Schema Guidance: https://github.com/ESIPFed/science-on-schema.org
+    - User Interface:
+        - Facetsearch:
+            - UI: "https://geocodes.earthcube.org/#/landing"
+            - repository: "https://github.com/earthcube/facetsearch"
+    - Resource Management:
+        - JSONLD Forms:
+            - UI: "https://addto.earthcube.org"
+            - repository: "https://github.com/earthcube/jsonld_forms"
+  - Developers:
+      - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
+      - Ingest Orchestration: '!import https://github.com/gleanerio/scheduler.git?branch=dev'
+      - Earthcube Utilities:
+          - Overview: https://earthcube.github.io/earthcube_utilities/
+          - Earthcube Utilities: https://earthcube.github.io/earthcube_utilities/earthcube_utilities/
+          - Summarize: https://earthcube.github.io/earthcube_utilities/summarize/
+   #     - Notebook Proxy: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=notebook_proxy/&config=notebook_proxy/mkdocs.yml'
+
   - Indexing:
 #      - Gleaner: '!import https://github.com/gleanerio/gleaner?branch=dev_docs'
 #      - Nabu: '!import https://github.com/gleanerio/nabu?branch=dev_docs'
-      - Gleaner Docs: '!import https://github.com/gleanerio/gleanerdocs.github.io?branch=docs_mkdocs&config=mkdocs_ec.yml'
-      - Summarization: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=summarize/docs&config=summarize/mkdocs.yml'
-  - Developers:
+      #     - Integration Testing: '!import https://github.com/earthcube/GeoCODES-Metadata.git?branch=main&docs_dir=integrationtesting/docs&config=integrationtesting/mkdocs.yml'
+      - Load Data:
+          - Install tool glcon: geocodes/docs/data_loading/install_glcon.md
+          - Load Data: geocodes/docs/data_loading/setup_indexing_with_gleanerio.md
+      - Tools:
+        - Gleaner Docs: '!import https://github.com/gleanerio/gleanerdocs.github.io?branch=docs_mkdocs&config=mkdocs_ec.yml'
+        - Summarization: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=summarize/docs&config=summarize/mkdocs.yml'
+
+  - Contributing:
       - General Developer Information: 'developers/'
-      - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
-      - Ingest Orchestration: '!import https://github.com/gleanerio/scheduler.git?branch=dev'
- #     - Integration Testing: '!import https://github.com/earthcube/GeoCODES-Metadata.git?branch=main&docs_dir=integrationtesting/docs&config=integrationtesting/mkdocs.yml'
       - Repositories: "https://github.com/earthcube"
