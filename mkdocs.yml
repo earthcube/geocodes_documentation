@@ -38,6 +38,14 @@ plugins:
           import_url: https://github.com/earthcube/geocodes?branch=docs&docs_dir=docs&config=mkdocs.yml
           # NOTE USING THE DOCS BRANCH
           imports: [ docs/data_loading/setup_indexing_with_gleanerio.md, docs/data_loading/install_glcon.md ]
+        - name: sos
+          import_url: https://github.com/ESIPFed/science-on-schema.org/?branch=master
+          # NOTE USING THE master BRANCH
+          imports: [ assets/*, guides/Dataset.md, guides/DataRepository.md , guides/GETTING-STARTED.md ]
+        - name: metadata
+          import_url: https://github.com/earthcube/GeoCODES-Metadata//?branch=main
+          # NOTE USING THE master BRANCH
+          imports: [ docs/images/*, docs/geocodesSearchProfile.md, integrationtesting/Readme.md ]
   -  mermaid2
   - literate-nav
   -  mkdocs-jupyter
@@ -57,7 +65,10 @@ nav:
       - Community: 'examples/community/'
   - Information for Repositories and Users:
     - Science On Schema:
-        - Earthcube Specifications: '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
+        - Metadata on the Web: metadata/docs/geocodesSearchProfile.md
+        - Getting Started: sos/guides/GETTING-STARTED.md
+        - Dataset: sos/guides/Dataset.md
+        - Earthcube Gudiance: '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
         - Science on Schema Guidance: https://github.com/ESIPFed/science-on-schema.org
     - User Interface:
         - Facetsearch:
@@ -79,13 +90,13 @@ nav:
   - Indexing:
 #      - Gleaner: '!import https://github.com/gleanerio/gleaner?branch=dev_docs'
 #      - Nabu: '!import https://github.com/gleanerio/nabu?branch=dev_docs'
-      #     - Integration Testing: '!import https://github.com/earthcube/GeoCODES-Metadata.git?branch=main&docs_dir=integrationtesting/docs&config=integrationtesting/mkdocs.yml'
       - Load Data:
           - Install tool glcon: geocodes/docs/data_loading/install_glcon.md
           - Load Data: geocodes/docs/data_loading/setup_indexing_with_gleanerio.md
       - Tools:
         - Gleaner Docs: '!import https://github.com/gleanerio/gleanerdocs.github.io?branch=docs_mkdocs&config=mkdocs_ec.yml'
         - Summarization: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=summarize/docs&config=summarize/mkdocs.yml'
+        - Integration Testing: metadata/integrationtesting/Readme.md
 
   - Contributing:
       - General Developer Information: 'developers/'
