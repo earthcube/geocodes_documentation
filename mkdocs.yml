@@ -10,7 +10,6 @@ theme:
     - navigation.tabs
     - navigation.path
 markdown_extensions:
-  -  glightbox
   - toc:
       permalink: 
   - attr_list
@@ -27,6 +26,7 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:mermaid2.fence_mermaid_custom
 plugins:
+  -  glightbox
   - search
 # literate_nav must load after multirepo for the features to be available.
   - multirepo:
