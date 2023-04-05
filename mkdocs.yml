@@ -45,7 +45,7 @@ plugins:
         - name: metadata
           import_url: https://github.com/earthcube/GeoCODES-Metadata//?branch=main
           # NOTE USING THE master BRANCH
-          imports: [ docs/images/*, docs/geocodesSearchProfile.md, integrationtesting/Readme.md ]
+          imports: [ docs/images/*, docs/geocodesSearchProfile.md, integrationtesting/README.md ]
   -  mermaid2
   - literate-nav
   -  mkdocs-jupyter
@@ -96,7 +96,7 @@ nav:
       - Tools:
         - Gleaner Docs: '!import https://github.com/gleanerio/gleanerdocs.github.io?branch=docs_mkdocs&config=mkdocs_ec.yml'
         - Summarization: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=summarize/docs&config=summarize/mkdocs.yml'
-        - Integration Testing: metadata/integrationtesting/Readme.md
+        - Integration Testing: metadata/integrationtesting/README.md
 
   - Contributing:
       - General Developer Information: 'developers/'
