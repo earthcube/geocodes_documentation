@@ -1,15 +1,20 @@
 site_name: Earthcube Infrastructure Documentation
+#edit_uri: blob/docs/docs/
 #theme: 'material'
 #theme: 'mkdocs'
 theme:
   name: material
 #  name: 'readthedocs'
   features:
-    #    - content.code.copy
+#    - content.action.edit
+#    - content.action.view
     - navigation.sections
     - navigation.tabs
     - navigation.path
     - navigation.indexes
+  icon:
+    edit: material/pencil
+    view: material/eye
 markdown_extensions:
   - toc:
       permalink: 

@@ -5,9 +5,12 @@ The [mkdocs.yml](https://github.com/earthcube/geocodes_documentation/blob/main/m
 
 To add a new section, you add an import to the nav section based on: https://github.com/jdoiro3/mkdocs-multirepo-plugin#setup
 
-In your repo, you add a mkdocs.
+In your repo, you add a mkdocs.yml
 
 ## [Markup cheat sheet ](https://yakworks.github.io/docmark/cheat-sheet/)
+
+For good examples and editable pages see [Geocodes](https://earthcube.github.io/geocodes)
+
 
 !!! note 
     We are using mkdocs, so [admonitions](https://pypi.org/project/mkdocs-callouts/)
@@ -16,6 +19,7 @@ In your repo, you add a mkdocs.
 https://squidfunk.github.io/mkdocs-material/reference/admonitions/#configuration
 
 # MKDOCS References
+
 
 Mkdocs on github how tos:
 
