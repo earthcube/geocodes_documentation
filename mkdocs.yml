@@ -1,12 +1,20 @@
 site_name: Earthcube Infrastructure Documentation
+#edit_uri: blob/docs/docs/
 #theme: 'material'
 #theme: 'mkdocs'
 theme:
   name: material
 #  name: 'readthedocs'
   features:
-    #    - content.code.copy
+#    - content.action.edit
+#    - content.action.view
     - navigation.sections
+    - navigation.tabs
+    - navigation.path
+    - navigation.indexes
+  icon:
+    edit: material/pencil
+    view: material/eye
 markdown_extensions:
   - toc:
       permalink: 
@@ -18,14 +26,31 @@ markdown_extensions:
   - admonition
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.superfences
-
+  - pymdownx.superfences:
+     custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
 plugins:
+  -  glightbox
   - search
 # literate_nav must load after multirepo for the features to be available.
   - multirepo:
       # (optional) tells multirepo to cleanup the temporary directory after site is built.
       cleanup: true
+      nav_repos:
+        - name: geocodes
+          import_url: https://github.com/earthcube/geocodes?branch=docs&docs_dir=docs&config=mkdocs.yml
+          # NOTE USING THE DOCS BRANCH
+          imports: [ docs/data_loading/setup_indexing_with_gleanerio.md, docs/data_loading/install_glcon.md ]
+        - name: sos
+          import_url: https://github.com/ESIPFed/science-on-schema.org/?branch=master
+          # NOTE USING THE master BRANCH
+          imports: [ assets/*, guides/Dataset.md, guides/DataRepository.md , guides/GETTING-STARTED.md ]
+        - name: metadata
+          import_url: https://github.com/earthcube/GeoCODES-Metadata//?branch=main
+          # NOTE USING THE master BRANCH
+          imports: [ docs/images/*, docs/geocodesSearchProfile.md, integrationtesting/README.md ]
   -  mermaid2
   - literate-nav
   -  mkdocs-jupyter
@@ -34,32 +59,50 @@ plugins:
 #  - schema_reader:
 #      include:
 #        - "./docs/GeoCODES-Metadata/schemas/"
+#extra_javascript:
+#  - https://unpkg.com/mermaid/dist/mermaid.min.js
+#
 nav:
   - Home: index.md
   - Examples:
       - Geocodes: 'examples/geocodes.md'
       - Developement: 'examples/developement/'
       - Community: 'examples/community/'
-  - Science On Schema:  '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
-  - Earthcube Utilities:
-      - Utilities: "https://earthcube.github.io/earthcube_utilities/"
- #     - Notebook Proxy: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=notebook_proxy/&config=notebook_proxy/mkdocs.yml'
-  - User Interface:
-      - Facetsearch:
-          - UI: "https://geocodes.earthcube.org/#/landing"
-          - repository: "https://github.com/earthcube/facetsearch"
-  - Resource Management:
-      - JSONLD Forms:
-          - UI: "https://addto.earthcube.org"
-          - repository: "https://github.com/earthcube/jsonld_forms"
+  - Information for Repositories and Users:
+    - Science On Schema:
+        - Metadata on the Web: metadata/docs/geocodesSearchProfile.md
+        - Getting Started: sos/guides/GETTING-STARTED.md
+        - Dataset: sos/guides/Dataset.md
+        - Earthcube Gudiance: '!import https://github.com/earthcube/GeoCODES-Metadata?branch=main'
+        - Science on Schema Guidance: https://github.com/ESIPFed/science-on-schema.org
+    - User Interface:
+        - Facetsearch:
+            - UI: "https://geocodes.earthcube.org/#/landing"
+            - repository: "https://github.com/earthcube/facetsearch"
+    - Resource Management:
+        - JSONLD Forms:
+            - UI: "https://addto.earthcube.org"
+            - repository: "https://github.com/earthcube/jsonld_forms"
+  - Developers:
+      - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
+      - Ingest Orchestration: '!import https://github.com/gleanerio/scheduler.git?branch=dev'
+      - Earthcube Utilities:
+          - Overview: https://earthcube.github.io/earthcube_utilities/
+          - Earthcube Utilities: https://earthcube.github.io/earthcube_utilities/earthcube_utilities/
+          - Summarize: https://earthcube.github.io/earthcube_utilities/summarize/
+   #     - Notebook Proxy: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=notebook_proxy/&config=notebook_proxy/mkdocs.yml'
+
   - Indexing:
 #      - Gleaner: '!import https://github.com/gleanerio/gleaner?branch=dev_docs'
 #      - Nabu: '!import https://github.com/gleanerio/nabu?branch=dev_docs'
-      - Gleaner Docs: '!import https://github.com/gleanerio/gleanerdocs.github.io?branch=docs_mkdocs&config=mkdocs_ec.yml'
-      - Summarization: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=summarize/docs&config=summarize/mkdocs.yml'
-  - Developers:
+      - Load Data:
+          - Install tool glcon: geocodes/docs/data_loading/install_glcon.md
+          - Load Data: geocodes/docs/data_loading/setup_indexing_with_gleanerio.md
+      - Tools:
+        - Gleaner Docs: '!import https://github.com/gleanerio/gleanerdocs.github.io?branch=docs_mkdocs&config=mkdocs_ec.yml'
+        - Summarization: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=summarize/docs&config=summarize/mkdocs.yml'
+        - Integration Testing: metadata/integrationtesting/README.md
+
+  - Contributing:
       - General Developer Information: 'developers/'
-      - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
-      - Ingest Orchestration: '!import https://github.com/gleanerio/scheduler.git?branch=dev'
- #     - Integration Testing: '!import https://github.com/earthcube/GeoCODES-Metadata.git?branch=main&docs_dir=integrationtesting/docs&config=integrationtesting/mkdocs.yml'
       - Repositories: "https://github.com/earthcube"
