@@ -1,6 +1,34 @@
 # geocodes_documentation 
 
 [ Geocodes Documentation on Github io](https://earthcube.github.io/geocodes_documentation/)
+
+This repository wraps/brings information for multiple repositories. The mkdocs.yml controls the rendering
+
+~~~mermaid
+flowchart 
+
+    subgraph geocodes_documentation Repository
+        D{mkdocs.yml}
+        o(geocodes_documenation/docs)
+        subgraph Geocodes Docker Container Repository
+             gc{mkdocs.yml}
+             gc2(deployment)
+             gc3(production)
+             gc4(indexing)
+        end 
+
+        subgraph Earthcube Utilities Repository
+             ecu{mkdocs.yml}
+             ecu2(earthcube utilities)
+             ecu3(summarize)
+             ecu4(notebook proxy)
+        end 
+
+        o3(gleaner)
+        o4(metadata)
+    end
+~~~
+
 The multi-repository approach means that this top level repository is not updated when
 a lower repository is updated, so you may find more recent updated in the repositories.
 
