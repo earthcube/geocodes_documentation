@@ -4,10 +4,15 @@
 The multi-repository approach means that this top level repository is not updated when
 a lower repository is updated, so you may find more recent updated in the repositories.
 
-* [ Geocodes Documentation](https://earthcube.github.io/geocodes/)
+* [ Geocodes Docker Container Documentation](https://earthcube.github.io/geocodes/)
 * [Earthcube Utilities Documentation](https://earthcube.github.io/earthcube_utilities/)
-* 
 
+It also pulls in information from
+* [Gleeaner (JSON-LD collection and Graph Loading)](https://github.com/gleanerio)
+* [Earthcube Metadata](https://github.com/earthcube/GeoCODES-Metadata)
+* [Science on Schema](https://github.com/ESIPFed/science-on-schema.org)
+
+## Adding to The Documentation
 To add a repository to this GH Pages, 
 * clone
 * uses .github/workflows/runscript.yml 
@@ -32,6 +37,8 @@ and
           
 ```
 
+### Testing Updated Documentation
+
 Using the MkDocs plugin: https://github.com/jdoiro3/mkdocs-multirepo-plugin
 
 Install the requirements, and run from cli with 
@@ -42,7 +49,7 @@ see docs/developers/addingdocumentation.md
 
 =====
 
-This_ repository is for documentation on the GeoCodes technology stack and production operation of the Gleaner-Nabu-GeoCodes UI workflow.
+This repository is for documentation on the GeoCodes technology stack and production operation of the Gleaner-Nabu-GeoCodes UI workflow.
 
 * Crawling and indexing the metadata, with [gleaner](https://github.com/earthcube/geocodes/blob/main/docs/indexing_with_gleanerio.md)
 * [Faceted](https://github.com/earthcube/facetsearch) [search](http://geocodes.ddns.net/ec/GeoCODES) [page](https://dev.geocodes.earthcube.org/)
