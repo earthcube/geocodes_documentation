@@ -3,7 +3,7 @@
 name: mkdocs
 on:
   schedule:
-    - 0 0 * * *
+    - 0 0 * * 7
   push:
     branches:
       - main
