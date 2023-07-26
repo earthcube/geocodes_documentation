@@ -104,7 +104,6 @@ nav:
           - Load Data: geocodes/docs/data_loading/setup_indexing_with_gleanerio.md
       - Tools:
         - Gleaner Docs: '!import https://github.com/gleanerio/gleanerdocs.github.io?branch=docs_mkdocs&config=mkdocs_ec.yml'
-        - Summarization: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=summarize/docs&config=summarize/mkdocs.yml'
         - Integration Testing: metadata/integrationtesting/README.md
 
   - Contributing:
