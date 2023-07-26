@@ -51,6 +51,9 @@ plugins:
           import_url: https://github.com/earthcube/GeoCODES-Metadata//?branch=main
           # NOTE USING THE master BRANCH
           imports: [ docs/images/*, docs/geocodesSearchProfile.md, integrationtesting/README.md ]
+        - name: scheduler
+          import_url: https://github.com/earthcube/scheduler?branch=dev_docs&docs_dir=docs&config=mkdocs.yml
+          imports: [ docs/eco_deploy.md ]
   -  mermaid2
   - literate-nav
   -  mkdocs-jupyter
