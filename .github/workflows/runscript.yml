@@ -2,6 +2,8 @@
 
 name: mkdocs
 on:
+  schedule:
+    - cron: '0 0 * * 6'
   push:
     branches:
       - main
@@ -22,8 +24,8 @@ jobs:
       - run: pip install mkdocs-jupyter
       - run: pip install mkdocs-callouts
       - run: pip install mkdocstrings-python
-      - run: pip install  mkdocs-include-markdown-plugin
-      - run: pip install  mkdocs-glightbox
+      - run: pip install mkdocs-include-markdown-plugin
+      - run: pip install mkdocs-glightbox
       - name: Checkout
         uses: actions/checkout@v3
 ## no cleaup needed

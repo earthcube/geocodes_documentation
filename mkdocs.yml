@@ -51,6 +51,9 @@ plugins:
           import_url: https://github.com/earthcube/GeoCODES-Metadata//?branch=main
           # NOTE USING THE master BRANCH
           imports: [ docs/images/*, docs/geocodesSearchProfile.md, integrationtesting/README.md ]
+        - name: scheduler
+          import_url: https://github.com/earthcube/scheduler?branch=dev_docs&docs_dir=docs&config=mkdocs.yml
+          imports: [ docs/eco_deploy.md ]
   -  mermaid2
   - literate-nav
   -  mkdocs-jupyter
@@ -85,7 +88,7 @@ nav:
             - repository: "https://github.com/earthcube/jsonld_forms"
   - Developers:
       - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
-      - Ingest Orchestration: '!import https://github.com/gleanerio/scheduler.git?branch=dev'
+      - Ingest Orchestration: '!import https://github.com/earthcube/scheduler?branch=dev_docs&docs_dir=docs&config=mkdocs.yml'
       - Earthcube Utilities:
           - Overview: https://earthcube.github.io/earthcube_utilities/
           - Earthcube Utilities: https://earthcube.github.io/earthcube_utilities/earthcube_utilities/
@@ -100,7 +103,6 @@ nav:
           - Load Data: geocodes/docs/data_loading/setup_indexing_with_gleanerio.md
       - Tools:
         - Gleaner Docs: '!import https://github.com/gleanerio/gleanerdocs.github.io?branch=docs_mkdocs&config=mkdocs_ec.yml'
-        - Summarization: '!import https://github.com/earthcube/earthcube_utilities.git?branch=dev&docs_dir=summarize/docs&config=summarize/mkdocs.yml'
         - Integration Testing: metadata/integrationtesting/README.md
 
   - Contributing:
