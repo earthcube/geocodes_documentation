@@ -88,8 +88,7 @@ nav:
             - repository: "https://github.com/earthcube/jsonld_forms"
   - Developers:
       - Services Infrastructure: '!import https://github.com/earthcube/geocodes?branch=main&docs_dir=docs&config=mkdocs.yml'
-      - Ingest Orchestration:
-          - Scheduler: '!import https://github.com/earthcube/scheduler?branch=dev_docs&docs_dir=docs&config=mkdocs.yml'
+      - Ingest Orchestration: '!import https://github.com/earthcube/scheduler?branch=dev_docs&docs_dir=docs&config=mkdocs.yml'
       - Earthcube Utilities:
           - Overview: https://earthcube.github.io/earthcube_utilities/
           - Earthcube Utilities: https://earthcube.github.io/earthcube_utilities/earthcube_utilities/
