@@ -34,6 +34,7 @@ jobs:
         with:
           repository: earthcube/geocodes
           path: docs/geocodes
+          branch: docs
       - run: cd docs/geocodes && rm -rf '!(docs)' && cd ..
 #
 #      - name: Checkout
