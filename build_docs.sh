@@ -9,7 +9,7 @@ cd docs
 git submodule add https://github.com/earthcube/geocodes.git
 cd geocodes && rm -rf !(docs)
 cd ..
-git submodule addhttps://github.com/earthcube/GeoCODES-Metadata.git
+git submodule add https://github.com/earthcube/GeoCODES-Metadata.git
 cd GeoCODES-Metadata && rm -rf !(docs)
 cd ..
 git submodule add https://github.com/gleanerio/gleaner.git

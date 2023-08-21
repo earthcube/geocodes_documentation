@@ -22,7 +22,7 @@
 * [Nabu -- Converting to Graph](indexing/nabu/)
 
 
-### Services Infrastructure, aka Production]
+### Services Infrastructure, aka Production
 
 *  [Services Infrastructure](developers/services-infrastructure/)
 
