@@ -29,12 +29,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 ## no cleaup needed
-#      - name: Checkout
-#        uses: actions/checkout@v3
-#        with:
-#          repository: earthcube/geocodes
-#          path: docs/geocodes
-#      - run: cd docs/geocodes && rm -rf '!(docs)' && cd ..
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: earthcube/geocodes
+          path: docs/geocodes
+      - run: cd docs/geocodes && rm -rf '!(docs)' && cd ..
 #
 #      - name: Checkout
 #        uses: actions/checkout@v3
