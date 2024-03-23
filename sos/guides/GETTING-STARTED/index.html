@@ -1,0 +1,4783 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../../metadata/docs/geocodesSearchProfile/">
+      
+      
+        <link rel="next" href="../Dataset/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Getting Started - Earthcube Infrastructure Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.10ba22f1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Earthcube Infrastructure Documentation" class="md-header__button md-logo" aria-label="Earthcube Infrastructure Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Earthcube Infrastructure Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../examples/geocodes/" class="md-tabs__link">
+          
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../metadata/docs/geocodesSearchProfile/" class="md-tabs__link">
+          
+  
+    
+  
+  Information for Repositories and Users
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../developers/services-infrastructure/" class="md-tabs__link">
+          
+  
+    
+  
+  Developers
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../geocodes/docs/data_loading/install_glcon/" class="md-tabs__link">
+          
+  
+    
+  
+  Indexing
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../developers/addingdocumentation/" class="md-tabs__link">
+          
+  
+    
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Earthcube Infrastructure Documentation" class="md-nav__button md-logo" aria-label="Earthcube Infrastructure Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Earthcube Infrastructure Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/geocodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geocodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../examples/developement/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Developement
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Developement
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../examples/community/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Information for Repositories and Users
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Information for Repositories and Users
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Science On Schema
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Science On Schema
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../metadata/docs/geocodesSearchProfile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata on the Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Earthcube Gudiance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Earthcube Gudiance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../information-for-repositories-and-users/science-on-schema/earthcube-gudiance/geocodesSearchProfile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata Profile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../information-for-repositories-and-users/science-on-schema/earthcube-gudiance/collections-ro-crate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collections Profile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../information-for-repositories-and-users/science-on-schema/earthcube-gudiance/MetadataPublicationOnTheWeb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Considerations for publishing metadata for web harvesting.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ESIPFed/science-on-schema.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Science on Schema Guidance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    User Interface
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            User Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Facetsearch
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Facetsearch
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://geocodes.earthcube.org/#/landing" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/earthcube/facetsearch" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Resource Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Resource Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JSONLD Forms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            JSONLD Forms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://addto.earthcube.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/earthcube/jsonld_forms" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Services Infrastructure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Services Infrastructure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../developers/services-infrastructure/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    How To Create a Geocodes Server
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            How To Create a Geocodes Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/stack_machines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_2_1" id="__nav_4_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Services
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/setting_up_services/setup_base_machine_configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base Machine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/setting_up_services/setup_geocodes_services_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Services Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/setting_up_services/setup_gleaner_container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Gleaner Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_2_2" id="__nav_4_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Test Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Test Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/data_loading/indexing_with_gleanerio_for_testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Load Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_2_3" id="__nav_4_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Interface
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Interface
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/setting_up_user_interface/setup_geocodes_ui_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Geocodes UI Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/setting_up_user_interface/tenant" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a Community Instance (Tenant)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Load Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Load Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/data_loading/setup_indexing_with_gleanerio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Load Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/data_loading/configuration" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/data_loading/onboarding_or_testing_a_datasource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onboarding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/data_loading/dataloading_troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Loading Trouble shooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/data_loading/using_screen_for_manual_loading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manual Loading with screen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/data_loading/watching_manual_gleanerio_data_loading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Loading - Watching CLI/Manual Loading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Production
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Production
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/production" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/production/creatingAndLoadingProduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Loading Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/production/managing_services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/data_loading/onboarding_or_testing_a_datasource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing/Onboarding a Datasource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/production/production_ui_deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Production UI DNS changes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tooling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Tooling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/data_loading/install_glcon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Glcon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_5_2" id="__nav_4_1_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Earthcube Utilities
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Earthcube Utilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/https:/earthcube.github.io/earthcube_utilities" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/https:/earthcube.github.io/earthcube_utilities/earthcube_utilities" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Earthcube Utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/https:/earthcube.github.io/earthcube_utilities/summarize" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summarize
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../developers/services-infrastructure/development/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/development/local_stacks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Stacks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/docs/development/localdeveloper_configs.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration examples (TBD)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_7" id="__nav_4_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Help
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Help
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/production/sparql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Some SPARQL Queries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ingest Orchestration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ingest Orchestration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../developers/ingest-orchestration/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Gleaner IO Scheduler
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Gleaner IO Scheduler
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/ingest-orchestration/quick/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/ingest-orchestration/add_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/ingest-orchestration/eco_deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scheduler Deployment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Earthcube Utilities
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Earthcube Utilities
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://earthcube.github.io/earthcube_utilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://earthcube.github.io/earthcube_utilities/earthcube_utilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Earthcube Utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://earthcube.github.io/earthcube_utilities/summarize/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summarize
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Indexing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Indexing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Load Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Load Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../geocodes/docs/data_loading/install_glcon/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install tool glcon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../geocodes/docs/data_loading/setup_indexing_with_gleanerio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Load Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../metadata/integrationtesting/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../indexing/tools/gleaner-docs/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Gleaner Docs
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Gleaner Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1_2" id="__nav_5_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Running
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Running
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/tools/gleaner-docs/quickstart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/tools/gleaner-docs/cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/tools/gleaner-docs/dockercli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker CLI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/tools/gleaner-docs/config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1_4" id="__nav_5_2_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Applications
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/tools/gleaner-docs/gleaner/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gleaner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/tools/gleaner-docs/nabu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nabu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../indexing/tools/gleaner-docs/faircontext/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communities and Fair
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Contributing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General Developer Information
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            General Developer Information
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/addingdocumentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    notes on adding documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/communiity-info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About the NSF Earthcube Community Infrastructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribution Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1_4" id="__nav_6_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Services infrastructure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Services infrastructure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/development_notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes on issues
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/install_minio_client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    minio client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1_4_3" id="__nav_6_1_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_1_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/development/localdeveloper_configs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Production configuration settings.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1_4_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../developers/services-infrastructure/ecrr/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Ecrr
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_1_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ecrr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1_4_5" id="__nav_6_1_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Setting up services
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_1_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Setting up services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/setting_up_services/setting_up_aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up Geocodes Services on AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/setting_up_services/setup_aws_neptune/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup aws neptune
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/services-infrastructure/setting_up_services/setup_docker_swarm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    intial notes on setting up a docker swarm on aws
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1_5" id="__nav_6_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ingest orchestration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ingest orchestration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/ingest-orchestration/alternatives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alternative Approaches
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/ingest-orchestration/refactor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    refactoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1_5_3" id="__nav_6_1_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_1_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Assets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1_5_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../developers/ingest-orchestration/assets/configs/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Configs
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_6_1_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Configs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1_5_4" id="__nav_6_1_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Images
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_1_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Images
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developers/ingest-orchestration/images/appendix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/earthcube" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><a id="top"></a>
+<a href="/README.md">Home</a> | Getting Started</p>
+<h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link"></a></h1>
+<p>If you are new to publishing schema.org, here are some general tips to getting started.</p>
+<ul>
+<li><a href="#goals">Goal</a></li>
+<li><a href="#approach">Approach</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#using-schemaorg">Using schema.org</a></li>
+<li><a href="#using-schemaorg_adding-jsonld-webpages">Modifying web pages to include schema.org as JSON-LD</a></li>
+<li><a href="#context">Specifying the context</a></li>
+<li><a href="#sitemaps">Provide a Sitemap</a></li>
+<li><a href="#data-types">Data Types</a><ul>
+<li><a href="#data-types_Text">Text</a></li>
+<li><a href="#data-types_Number">Number</a></li>
+<li><a href="#data-types_URL">URL</a></li>
+<li><a href="#data-types_Boolean">Boolean</a></li>
+<li><a href="#data-types_Date">Date</a></li>
+<li><a href="#data-types_DateTime">DateTime</a></li>
+<li><a href="#data-types_Time">Time</a></li>
+<li><a href="#data-types_HTML">HTML</a></li>
+</ul>
+</li>
+<li><a href="#resource-types">Resource Types</a></li>
+<li><a href="#modification_times">Resource Modification Time</a></li>
+<li><a href="#mod_so"><code>schema.org/dateModified</code></a></li>
+<li><a href="#mod_http">HTTP <code>Last-Modified</code></a></li>
+<li><a href="#mod_map">Sitemap <code>&lt;lastmod&gt;</code></a></li>
+<li><a href="#json-ld">JSON-LD Graph Techniques</a></li>
+<li><a href="#json-ld-list">Ordered Lists</a></li>
+</ul>
+<h1 id="goals">Goals<a class="headerlink" href="#goals" title="Permanent link"></a></h1>
+<p>To provide a place for the scientific data community to work out how best to implement <strong>schema.org</strong> and other external vocabularies on web pages by publishing guidance documents. <em><a href="/pulls">Pull requests</a></em> and <em><a href="/issues">Github Issues</a></em> are welcome!</p>
+<p><a id="approach"></a></p>
+<h2 id="approach">Approach<a class="headerlink" href="#approach" title="Permanent link"></a></h2>
+<ol>
+<li>To be <strong>pragmatic</strong> with our use of schema.org and external vocabulary adoption.</li>
+<li>To <strong>consider schema.org classes and properties first</strong> before considering external vocabularies.</li>
+<li>Use <strong><a href="https://json-ld.org/">JSON-LD</a></strong> in our guidance documents for simplicity and terseness as compared to <em><a href="https://www.w3.org/TR/microdata/">Microdata</a></em> and <em><a href="https://rdfa.info/">RDFa</a></em>. For more, see <a href="/CONVENTIONS.md#why-jsonld">Why JSON-LD?</a> from the <a href="/CONVENTIONS.md">Conventions</a> document.</li>
+<li>Presently, the <a href="https://search.google.com/test/rich-results">Google Rich Results Tool</a> enforces use of <a href="https://schema.org/">schema.org</a> classes and properties by displaying an error whenever external vocabularies are used. schema.org proposes linking to external vocabularies usuing the <a href="https://schema.org/additionalType">schema:additionalType</a> property. While this property is defined as a sub property of <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a>, it's data type is a literal. However, using the <a href="https://validator.schema.org/">Schema.org Validator</a> allows for the use of external vocabularies. We encourage the use of JSON-LD <code>'@type'</code> for typing classes to external vocabularies. For more, see <a href="/CONVENTIONS.md#external-vocab-typing">Typing to External Vocabularies</a> from the <a href="/CONVENTIONS.md">Conventions</a> document.</li>
+<li>See <a href="/GOVERNANCE.md">Governance</a> for how we will govern the project.</li>
+<li>See <a href="/CONVENTIONS.md">Conventions</a> for guidance on creating/editing guidance documents.</li>
+</ol>
+<p><a id="prerequisites"></a></p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link"></a></h2>
+<ol>
+<li>We assume a general understanding of <a href="http://www.json.org/">JSON</a>.</li>
+<li>We assume a basic knowledge about <a href="https://json-ld.org">JSON-LD</a>.</li>
+</ol>
+<p>JSON-LD is valid JSON, so standard developer tools that support JSON can be used. For some specific JSON-LD and schema.org help though, there are some other resources.</p>
+<p>##### JSON-LD resources  https://json-ld.org
+  Generating the JSON-LD is best done via libraries like those you can find at https://json-ld.org.<br />
+  There are libraries for; Javascript, Python, PHP, Ruby, Java, C# and Go.  While JSON-LD is just
+  JSON and can be generated many ways, these libraries
+  can generate valid JSON-LD spec output.   </p>
+<p>##### JSON-LD playground https://json-ld.org/playground/
+  The playground is hosted at the very useful <a href="https://json-ld.org">JSON-LD web site</a> site. You
+  can explore examples of JSON-LD and view how they convert to RDF, flatten, etc.   Note, that JSON-LD
+  is not associated with schema.org.  It can be used for much more and so most examples here don't
+  use schema.org and this site will NOT look to see if you are using schema.org types and properties
+  correctly.  Only that your JSON-LD is well formed.  </p>
+<ol>
+<li>We assume that you've heard about <a href="https://schema.org/">schema.org</a> and have already decided that it's useful to you.</li>
+<li>We assume that you have a general understanding of what may describe a scientific dataset.</li>
+</ol>
+<p>Let's go!</p>
+<p><a id="introduction"></a></p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link"></a></h2>
+<p>There is an emerging practice to leverage structured metadata to aid in the discovery of web based resources.  Much of this
+work is taking place in the context (no pun intended) of schema.org.  This approach has extended to the resource type Dataset.
+This page will present approaches, tools and references that will aid in the understanding and development of schema.org in
+JSON-LD and its connection to external vocabularies.  For a more thorough presentation on this visit the Google AI Blog entry
+of January 24 2017 at https://ai.googleblog.com/2017/01/facilitating-discovery-of-public.html .</p>
+<p><a id="using-schemaorg"></a></p>
+<h2 id="using-schemaorg">Using schema.org<a class="headerlink" href="#using-schemaorg" title="Permanent link"></a></h2>
+<p><a id="using-schemaorg_adding-jsonld-webpages"></a></p>
+<h3 id="modifying-web-pages-to-include-schemaorg-as-json-ld">Modifying web pages to include schema.org as JSON-LD<a class="headerlink" href="#modifying-web-pages-to-include-schemaorg-as-json-ld" title="Permanent link"></a></h3>
+<p>JSON-LD should be incorporated into the landing page html inside the <code>&lt;head&gt;&lt;/head&gt;</code> as a <code>&lt;script&gt;</code> element with a type of <code>application/ld+json</code>.  </p>
+<p><pre class="highlight"><code>&lt;html&gt;
+  &lt;head&gt;
+    ...
+    &lt;script id="schemaorg" type="application/ld+json"&gt;
+    {
+      "@context": "https://schema.org/",
+       "@id": "http://opencoredata.org/id/dataset/bcd15975-680c-47db-a062-ac0bb6e66816",
+       "@type": "Dataset",
+       "description": "Janus Thermal Conductivity for ocean drilling ..."
+    }
+    &lt;/script&gt;
+    ...
+  &lt;/head&gt;
+  ...
+&lt;/html&gt;
+ ```
+
+&lt;a id="context"&gt;&lt;/a&gt;
+### Specifying the `context`
+
+The `context` in a JSON-LD document defines the namespaces used in the document and their mappings to URIs when they
+are referenced using prefix notation. The JSON-LD 1.1 specification 
+[provides many rules](https://www.w3.org/TR/json-ld11-api/#remote-document-and-context-retrieval) that impact how the context is
+loaded and how it is retrieved, but ultimately the goal is to define a context map with the namespace mappings for each
+vocabulary used in the document. For the schema.org vocabulary specifically, the official namespace is `http://schema.org/`
+(note this is not an `https` URI), but the context file for schema.org can be retrieved from the `https` web location at
+`https://schema.org` by following the JSON-LD processing rules. For providers, this translates to a few simple recommendations.
+
+1. We recommend retrieving the context file from it's `https` location using the following syntax:
+</code></pre>
+{
+  "@context": "https://schema.org/",
+   "@type": "Dataset",
+   "name": "Example dataset title",
+   ...
+}
+<pre class="highlight"><code>
+Using that approach, the schema.org namespace will be set to `http` URIs. For example the `Dataset` type will be expanded to
+`http://schema.org/Dataset`.
+
+2. Should you need to define additional namespaces in your context, it can be done by expanding the context using a JSON array as follows:
+
+```json
+{
+  "@context": [
+    "https://schema.org/",
+    {
+      "prov": "http://www.w3.org/ns/prov#"
+    }
+  ],
+  "@type": "Dataset",
+  "name": "Example dataset title",
+  "prov:wasDerivedFrom": {
+    "@id": "https://doi.org/10.xxxx/Dataset-1"
+  }
+}</code></pre></p>
+<p>Note the square brackets, in which the first entry is the URL of a context file to be retrieved, and the second value is a JSON object to be
+combined with the retrieved context. This approach still retrieves the context from the secure <code>https</code> URL at schema.org, but then adds an additional
+namespace for the <code>prov</code> vocabulary to the context. Now, terms from the PROV namespace can be referenced using prefix notation (e.g., <code>prov:wasDerivedFrom</code>).</p>
+<ol>
+<li>Additional approaches to defining the context are possible, but users should use care to ensure that the terms within schema.org use the
+<code>http://schema.org/</code> namespace as defined in the official schema.org context file. Because contributors to schema.org are working towards
+accepting <code>https://schema.org/</code> as an equivalent namespace URI for all terms, processors should treat schema.org terms in the http and https
+URI spaces as equivalent, but providers might find it safer to continue to use <code>http://schema.org/</code> as the official namespace for now. This
+particularly applies when defining a default vocabulary for un-prefixed terms, in which case we recommend using <code>"@vocab": "http://schema.org/"</code>
+if this is necessary. That said, most user's should not have need to define <code>@vocab</code> in typical usage.</li>
+</ol>
+<p><a id="sitemaps"></a></p>
+<h3 id="provide-a-sitemapxml-file">Provide a Sitemap.xml file<a class="headerlink" href="#provide-a-sitemapxml-file" title="Permanent link"></a></h3>
+<p>Many harvesters and aggregators depend on the existence of a <code>sitemap.xml</code> file on your site that lists all of the dataset landing pages from your site that you want to be harvested and indexed for search. Google Dataset Search, DataONE, and Geocodes all can make use of a sitemap to more efficiently harvest your site. A sitemap is a simple text file that lists each page that you want harvested. This can contain any webpage, but in this context we specifically want to list pages that contain a <code>schema:Dataset</code> entry to be harvested. Here's an example <code>sitemap.xml</code> file listing two Dataset landing pages, along with their <code>lastmod</code> date:</p>
+<pre class="highlight"><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://arcticdata.io/catalog/view/doi%3A10.18739%2FA2GH9BB0Q&lt;/loc&gt;
+    &lt;lastmod&gt;2021-12-06&lt;/lastmod&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://arcticdata.io/catalog/view/doi%3A10.18739%2FA2ST7DZ2Q&lt;/loc&gt;
+    &lt;lastmod&gt;2021-12-07T12:15:05Z&lt;/lastmod&gt;
+  &lt;/url&gt;
+&lt;/urlset&gt;</code></pre>
+<p>Note the <code>&lt;lastmod&gt;</code> field, which indicates the last date on which the page was modified and is formatted as a <a href="https://www.w3.org/TR/NOTE-datetime">W3C DateTime</a> and may vary in precision. Most harvesters will use that date along with the HTTP <code>Last-modified</code> header to determine if a page has changed since the last time that a harvest was attempted. Keeping accurate <code>lastmod</code> values can massively improve the efficiency of indexing your catalog, as only the few items that have changed will need to be indexed.</p>
+<p><strong>Location:</strong> The sitemap.xml file can be located anywhere on your site that is above the path in the hierachy in which your pages are listed. Typically, the sitemap.xml is places at the root of the site, but other locations can be used as well. A great way to indicate to harvesters where your sitemap is located would be to include it in your <code>robots.txt</code> file at the root of your web site, which is bascially an instruction manual for harvesters. For example, you might have a robots.txt file with the following contents:</p>
+<pre>
+User-agent: *
+Sitemap: https://arcticdata.io/sitemap1.xml
+</pre>
+
+<p>Sitemaps are limited to 50,000 records and 50MB, so if your site is larger than that you can break up your sitemap into multiple files, linked together using a sitemap index. Details about <a href="https://www.sitemaps.org/protocol.html#index"><code>sitemap-index.xml</code></a> and other aspects of sitemaps are provided in the https://sitemaps.org site, as well as from the <a href="https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap">Google sitemap documentation</a>.</p>
+<p>By providing a sitemap and advertising its location, you make it simple for harvesters to find and index your Dataset listings.</p>
+<p><a id="data-types"></a></p>
+<h3 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link"></a></h3>
+<p>For each schema.org type, such as Person or Event, there are fields that let you specify more information about that type. Each of these fields has an expected data type that is defined in the documentation as you can see from <a href="#figure-1">Figure 1.</a>.</p>
+<p><a id="figure-1"></a></p>
+<p align="center">
+  <strong>Figure 1. schema.org field data types</strong><br/>
+  <a class="glightbox" href="/assets/schemaorg-datatypes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="/assets/schemaorg-datatypes.png"></a>
+  <em>The expected data type for each field appears in the middle column. The left column is the name of the field, the middle column is the data type, and the right column is the field's description.</em>
+</p>
+
+<p>Every data type is either a <em>resource</em> or a <em>literal</em>. Resources refer to other schema.org types. For example a Dataset type has a field called author of which the data type can be either a Person or an Organization. Because Person and Organization are other schema.org "types" who have their own fields, they are called resources. In JSON-LD, you specify resources by using curly brackets <code>{}</code>:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  <strong>"author": {
+    "@type": "Person",
+    "name": "Jane Goodall"
+  }</strong>
+}
+</pre>
+
+<p>In the JSON-LD above, the 'author' is a resource of type 'Person'. Fields that simply have a value are called literal data types. For examples, the 'Person' type above has a 'name' of "Jane Goodall" - a literal text value.</p>
+<p>Schema.org defines six literal, or primitive,  data types: <a href="https://schema.org/Text">Text</a>, <a href="https://schema.org/Number">Number</a>, <a href="https://schema.org/Boolean">Boolean</a>, <a href="https://schema.org/Date">Date</a>, <a href="https://schema.org/DateTime">DateTime</a>, and <a href="https://schema.org/Time">Time</a>. <a href="https://schema.org/Text">Text</a> has two special variations: <a href="https://schema.org/URL">URL</a> and how to specify when text is actually <a href="#data-type_HTML">HTML</a>.  </p>
+<p>When using schema.org, literal data types are not not specified using curly brackets <code>{}</code> as these are resrved for specifying 'objects' or 'resources' such as other schema.org types like <code>Person</code>, <code>Organization</code>, etc. First, let's see how to use a primitive data type by using fields of <a href="https://schema.org/CreativeWork">CreativeWork</a>, the superclass for <a href="https://schema.org/Dataset">Dataset</a>.</p>
+<p><a id="data-types_Text"></a></p>
+<h4 id="text">Text<a class="headerlink" href="#text" title="Permanent link"></a></h4>
+<p>Imagine we want to say the name of our Creative Work is "Passenger Manifest for H.M.S. Titanic". The <a href="https://schema.org/name">name</a> field of CreativeWork specifies that it expects Text as the data type. We would use it in this way:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "CreativeWork",
+  <strong>"name": "Passenger Manifest for H.M.S. Titanic"</strong>
+}
+</pre>
+
+<p><a id="data-types_Number"></a></p>
+<h4 id="number">Number<a class="headerlink" href="#number" title="Permanent link"></a></h4>
+<p>Let's say we want to specify the version number of our manifest using the <a href="https://schema.org/version">version</a> field of CreativeWork which expects a Number. To specify numbers in JSON-LD, we omit the quotations surrounding the value:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "CreativeWork",
+  "name": "Passenger Manifest for H.M.S. Titanic",
+  <strong>"version": 1</strong>
+}
+</pre>
+
+<p><a id="data-types_URL"></a></p>
+<h4 id="url">URL<a class="headerlink" href="#url" title="Permanent link"></a></h4>
+<p>Now, let's specify the URL of our manifest using the <a href="https://schema.org/url">url</a> field of CreativeWork, an inheritied field from <a href="https://schema.org/Thing">Thing</a>. This fields expects a valid URL represented as Text:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "CreativeWork",
+  "name": "Passenger Manifest for H.M.S. Titanic",
+  "version": 1,
+  <strong>"url": "https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv"</strong>
+}
+</pre>
+
+<p><a id="data-types_Boolean"></a></p>
+<h4 id="boolean">Boolean<a class="headerlink" href="#boolean" title="Permanent link"></a></h4>
+<p>Using the Boolean value, we can speficy that our manifest is accessible for free using the field <a href="https://schema.org/isAccessibleForFree">isAccessibleForFree</a> by using the text <code>true</code> or <code>false</code> and omitting the quotes:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "CreativeWork",
+  "name": "Passenger Manifest for H.M.S. Titanic",
+  "version": 1,
+  "url": "https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv",
+  <strong>"isAccessibleForFree": true</strong>
+}
+</pre>
+
+<p><a id="data-types_Date"></a></p>
+<h4 id="date">Date<a class="headerlink" href="#date" title="Permanent link"></a></h4>
+<p>To specify the <a href="https://schema.org/datePublished">datePublished</a>, which allows either a Date or DateTime, as a Date, we can use any <a href="https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO 8601 date format</a> by wrapping the date in double-quotes:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "CreativeWork",
+  "name": "Passenger Manifest for H.M.S. Titanic",
+  "version": 1,
+  "url": "https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv",
+  "isAccessibleForFree": true,
+  <strong>"datePublished": "2018-07-29"</strong>
+}
+</pre>
+
+<p><a id="data-types_DateTime"></a></p>
+<h4 id="datetime">DateTime<a class="headerlink" href="#datetime" title="Permanent link"></a></h4>
+<p>To specify the <a href="https://schema.org/dateModified">dateModified</a> as a DateTime, as a Date, we must follow the <a href="https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO 8601  format for combining date and time representations</a> using the form <code>[-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]</code>:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "CreativeWork",
+  "name": "Passenger Manifest for H.M.S. Titanic",
+  "version": 1,
+  "url": "https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv",
+  "isAccessibleForFree": true,
+  "datePublished": "2018-07-29",
+  <strong>"dateModified": "2018-07-30T14:30Z"</strong>
+}
+</pre>
+
+<p><a id="data-types_Time"></a></p>
+<h4 id="time">Time<a class="headerlink" href="#time" title="Permanent link"></a></h4>
+<p><a href="https://schema.org/Time">Time</a> is a rarely-used data type because it must represent a point in time recurring on multiple days following the <a href="https://www.w3.org/TR/xmlschema-2/#time">XML Schema definition</a> using the form <code>hh:mm:ss[Z|(+|-)hh:mm]</code> (see XML schema for details).</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "CreativeWork",
+  "name": "Passenger Manifest for H.M.S. Titanic",
+  "version": 1,
+  "url": "https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv",
+  "isAccessibleForFree": true,
+  "datePublished": "2018-07-29",
+  <strong>"dateModified": "2018-07-30T14:30Z"</strong>
+}
+</pre>
+
+<p><a id="data-types_HTML"></a></p>
+<h4 id="html">HTML<a class="headerlink" href="#html" title="Permanent link"></a></h4>
+<p>The HTML data type is a special variation of the <code>Text</code> data type. In some cases where <code>Text</code> is the expected data type, our actual data type may be HTML (because we are dealing with web pages). In this case, the <a href="https://schema.org/docs/jsonldcontext.json">schema.org JSON-LD context</a> defines <code>HTML</code> to mean <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">rdf:HTML</a>, the data type for specifying that a string of text should be interpreted as HTML. Let's say that we have a description of our manifest and want to use the <a href="https://schema.org/description">description</a> field, but we have HTML inside that text. Using the text field as we did above for the <code>name</code> field, we would specify the <code>description</code> as:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "CreativeWork",
+  "name": "Passenger Manifest for H.M.S. Titanic",
+  "version": 1,
+  "url": "https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv",
+  "isAccessibleForFree": true,
+  "datePublished": "2018-07-29",
+  "dateModified": "2018-07-30T14:30Z",
+  <strong>"description": "&lt;h3&gt;Acquisition&lt;/h3&gt;&lt;p&gt;The data was acquired from an office outside of &lt;a href\"https://en.wikipedia.org/wiki/New_York_City\"&gt;New York City&lt;/a&gt;."</strong>
+}
+</pre>
+
+<p>However, to specify that the <code>description</code> field should be <em>interpreted</em> as HTML, you specify <code>description</code> as a resource, setting the <code>@type</code> of that resource to "HTML" and placing the HTML string in a JSON-LD property <code>@value</code>:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "@type": "CreativeWork",
+  "name": "Passenger Manifest for H.M.S. Titanic",
+  "version": 1,
+  "url": "https://raw.githubusercontent.com/Geoyi/Cleaning-Titanic-Data/master/titanic_original.csv",
+  "isAccessibleForFree": true,
+  "datePublished": "2018-07-29",
+  "dateModified": "2018-07-30T14:30Z",
+  "description": {
+    <strong>"@type": "HTML",
+    "@value": "&lt;h3&gt;Acquisition&lt;/h3&gt;&lt;p&gt;The data was acquired from an office outside of &lt;a href\"https://en.wikipedia.org/wiki/New_York_City\"&gt;New York City&lt;/a&gt;."</strong>
+  }
+}
+</pre>
+
+<p><a id="resource=types"></a></p>
+<h3 id="resource-types">Resource Types<a class="headerlink" href="#resource-types" title="Permanent link"></a></h3>
+<p>All schema.org resources should make use of the <code>@type</code> property which 'classifies' the resources as a specific type. For example, an un-typed resource would look like:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  "name": "My Dataset"
+}
+</pre>
+
+<p>Even though the above resource has a name of 'My Dataset' harvesters are unaware that your <em>intent</em> was to classify it as a Dataset. Un-typed resources are not valid schema.org resources, and so they require the <code>@type</code> property:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  <strong>"@type": "Dataset",</strong>
+  "name": "My Dataset"
+}
+</pre>
+
+<p>In some cases, it useful to multi-type a resource. One example of this may be a data repository. A data repositotry is typically functioning as noth an 'Organization' that employs people and has an address, but it also functions as a 'Service' to its user community. To multi-type a resource, we use JSON arrays:</p>
+<pre>
+{
+  "@context": "https://schema.org/",
+  <strong>"@type": ["Organization", "Service"],</strong>
+  "name": "My Data Repository"
+}
+</pre>
+
+<p><strong>All <a href="https://schema.org/docs/full.html">schema.org types may be found here</a>.</strong></p>
+<p><a id="modification_times"></a></p>
+<h2 id="time-of-resource-modification">Time of resource modification<a class="headerlink" href="#time-of-resource-modification" title="Permanent link"></a></h2>
+<p>An indication of when a resource was modified is valuable to a consumer for a variety of reasons.</p>
+<p>A consumer tracking changes in a collection of <code>SO:Dataset</code> or similar resources being advertised
+with a <code>sitemap.xml</code> or similar mechanism has at least three timestamps that can be examined to
+determine if an already retrieved resource may have been modified: the <code>schema.org/dateModified</code>
+property in the JSON-LD, the <code>Last-Modified</code> time reported by the web server, and the <code>&lt;lastmod&gt;</code>
+time that may be reported in a <code>sitemap.xml</code> document.</p>
+<p>The <code>schema.org/dateModified</code> value should be considered authoritative for indicating when the
+resource was modified. The <code>Last-Modified</code> header should reflect the corresponding
+<code>schema.org/dateModified</code> entry. This property provides an important hint for consumers as to
+whether a cached copy of a resource should be updated for example. Similarly the <code>&lt;lastmod&gt;</code>
+entry should reflect the <code>Last-Modified</code> header and the <code>schema.org/dateModified</code> value.</p>
+<p>A typical pattern for a consumer interesting in synchronizing a cache of resource is:</p>
+<ol>
+<li>Examine the sitemap for new or updated entries using hints from <code>&lt;lastmod&gt;</code></li>
+<li>Retrieve the resource directly or by previewing with a HTTP HEAD request. A
+   <code>Last-Modified</code> provides a hint as to whether the resource should be retrieved.</li>
+<li>Examine the <code>schema.org/dateModified</code> property of the resource(s) extracted from the
+   resource.</li>
+</ol>
+<p>Providing accurate hints early in the process can reduce requirements for effectively
+sharing data resources.</p>
+<p><a id="mod_so"></a></p>
+<h3 id="1-schemaorgdatemodified">1. <code>schema.org/dateModified</code><a class="headerlink" href="#1-schemaorgdatemodified" title="Permanent link"></a></h3>
+<p>Each <code>schema.org</code> instance derived from <a href="https://schema.org/CreativeWork"><code>schema.org/CreativeWork</code></a>
+may have a <a href="https://schema.org/dateModified"><code>dateModified</code></a> property to indicate "The date on which
+the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed."
+This property should be provided with any instance of <code>schema.org/Dataset</code> or any other <code>schema.org</code>
+entity published in a landing page or though other mechanisms. The JSON spec does not include a
+built-in type for date time values, however the general consensus and a sensible practices is to
+represent a date time value as a time zone aware ISO 8601 formatted string. For example:</p>
+<pre class="highlight"><code class="language-json">{
+  "dateModified": "2018-12-10T13:45:00.000Z"
+}</code></pre>
+<p><a id="mod_http"></a></p>
+<h3 id="2-http-last-modified-header">2. HTTP <code>Last-Modified</code> Header<a class="headerlink" href="#2-http-last-modified-header" title="Permanent link"></a></h3>
+<p>A schema.org instance is typically embedded in a landing page or may be accessed directly as a
+JSON-LD document over the HTTP protocol. HTTP resource providers (i.e. web servers) may include
+a <a href="https://tools.ietf.org/html/rfc7232#section-2.2"><code>Last-Modified</code> header</a> which contains the
+date and time at which the origin server believes the resource was last modified. The format for
+the date value follows the <a href="https://tools.ietf.org/html/rfc2616">RFC 2616 specification</a>. For
+example:</p>
+<pre class="highlight"><code>Last-Modified: Mon, 10 Dec 2018 13:45:00 GMT</code></pre>
+<p><a id="mod_map"></a></p>
+<h3 id="3-sitemapxml-lastmod-value">3. <code>sitemap.xml lastmod</code> value<a class="headerlink" href="#3-sitemapxml-lastmod-value" title="Permanent link"></a></h3>
+<p>A <a href="https://www.sitemaps.org/protocol.html"><code>sitemap.xml</code></a> document provides a mechanism for a
+resource server to advertise available resources. Each <code>&lt;url&gt;</code> element may include a <code>&lt;lastmod&gt;</code>
+tag to indicate when the resource identified by the <code>&lt;url&gt;/&lt;loc&gt;</code> was last modified. The
+specification is fairly loose, indicating that date in the
+<a href="https://www.w3.org/TR/NOTE-datetime">W3C Datetime</a> format of <code>YYYY-MM-DD</code> may be
+sufficient. However, for the purposes of content synchronization, a higher precision is
+desireable, and should be provided where possible. For example:</p>
+<pre class="highlight"><code>2018-12-10T13:45:00.000Z</code></pre>
+<p><a id="json-ld"></a></p>
+<h2 id="json-ld-graph-techniques">JSON-LD Graph Techniques<a class="headerlink" href="#json-ld-graph-techniques" title="Permanent link"></a></h2>
+<p><a href="https://json-ld.org">JSON-LD</a> documents represent a graph model, even though at times that graph is implicit rather than being named. Here are some techniques that may be useful when constructing such graphs.</p>
+<p><a id="json-ld-list"></a></p>
+<h3 id="ordering-items-with-json-ld-list">Ordering items with JSON-LD <code>@list</code><a class="headerlink" href="#ordering-items-with-json-ld-list" title="Permanent link"></a></h3>
+<p>Unlike plain JSON, collections in JSON-LD are unordered [<a href="https://json-ld/json-ld.org#12">1</a>, <a href="https://www.w3.org/TR/json-ld/#lists">2</a>]. In cases where ordering of items needs to be preserved, we can use the <code>@list</code> keyword to specify that order should be preserved for a collection.  Ordered lists would be important, for example, when a list of authors or creators should be ordered as intended when rendering a view of the metadata, or when a list of bounding box coordinates in an array need to come in a particular order.</p>
+<p>In the following example, the list of <code>creator</code> items is not ordered, and so client tools could return the creator names in any order, and different tools may return them in different orders. This would be problematic for building a citation, for example.</p>
+<p>Example 1. Ordering for this list of creators will not be preserved:
+<pre class="highlight"><code>{
+  "@context": "https://schema.org/",
+  "@id": "unordered_01",
+  "@type": "Dataset",
+  "creator": [
+    {
+      "@id": "https://www.sample-data-repository.org/person/51317",
+      "@type": "Person",
+      "name": "Dr Uta Passow"
+    },
+    {
+      "@id": "https://www.sample-data-repository.org/person/50663",
+      "@type": "Person",
+      "name": "Dr Mark Brzezinski"
+    }
+  ]
+}</code></pre></p>
+<p>To order a list, use the JSON-LD <a href="https://www.w3.org/TR/json-ld/#lists"><code>@list</code> keyword`</a>, as shown in Example 2:</p>
+<p>Example 2. Order will be preserved for this list of creators:
+<pre class="highlight"><code>{
+  "@context": "https://schema.org/",
+  "@id": "order_01",
+  "@type": "Dataset",
+  "creator": {
+    "@list": [
+      {
+        "@id": "https://www.sample-data-repository.org/person/51317",
+        "@type": "Person",
+        "name": "Dr Uta Passow"
+      },
+      {
+        "@id": "https://www.sample-data-repository.org/person/50663",
+        "@type": "Person",
+        "name": "Dr Mark Brzezinski"
+      }
+    ]
+  }
+}</code></pre></p>
+<p>Ordering may be specified globally within the document by specifying the container type in a context. For example,
+after retrieving the context file from schema.org, we can define the <code>schema:creator</code> to be a list container globally
+in the document using the <code>@container</code> property:</p>
+<p>Example 3. Ordering of a list of creators is preserved anywhere such a list appears within the context.
+<pre class="highlight"><code>{
+  "@context": [
+    "https://schema.org/",
+    {
+      "creator": {
+        "@container": "@list"
+      }
+    }
+  ],
+  "@id": "order_02",
+  "@type": "Dataset",
+  "creator": [
+    {
+      "@id": "https://www.sample-data-repository.org/person/51317",
+      "@type": "Person",
+      "name": "Dr Uta Passow"
+    },
+    {
+      "@id": "https://www.sample-data-repository.org/person/50663",
+      "@type": "Person",
+      "name": "Dr Mark Brzezinski"
+    }
+  ]
+}</code></pre></p>
+<p>With this technique, ordering can be set once in the context using <code>@list</code>, and then order will be preserved anytime that concept is used in the document.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.tabs", "navigation.path", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

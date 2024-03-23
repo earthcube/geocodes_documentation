@@ -1,0 +1,1613 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.5.14" name="generator"/>
+<title>ECO Scheduler Notes - Earthcube Infrastructure Documentation</title>
+<link href="../../../assets/stylesheets/main.10ba22f1.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></link></head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#eco-scheduler-notes">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Earthcube Infrastructure Documentation" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Earthcube Infrastructure Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Earthcube Infrastructure Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              ECO Scheduler Notes
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../examples/geocodes/">
+          
+  
+    
+  
+  Examples
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../metadata/docs/geocodesSearchProfile/">
+          
+  
+    
+  
+  Information for Repositories and Users
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../developers/services-infrastructure/">
+          
+  
+    
+  
+  Developers
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../geocodes/docs/data_loading/install_glcon/">
+          
+  
+    
+  
+  Indexing
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../developers/addingdocumentation/">
+          
+  
+    
+  
+  Contributing
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Earthcube Infrastructure Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Earthcube Infrastructure Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Earthcube Infrastructure Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Examples
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../examples/geocodes/">
+<span class="md-ellipsis">
+    Geocodes
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../examples/developement/">
+<span class="md-ellipsis">
+    Developement
+  </span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Developement
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../examples/community/">
+<span class="md-ellipsis">
+    Community
+  </span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Information for Repositories and Users
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Information for Repositories and Users
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Science On Schema
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            Science On Schema
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../metadata/docs/geocodesSearchProfile/">
+<span class="md-ellipsis">
+    Metadata on the Web
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sos/guides/GETTING-STARTED/">
+<span class="md-ellipsis">
+    Getting Started
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sos/guides/Dataset/">
+<span class="md-ellipsis">
+    Dataset
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_4" id="__nav_3_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Earthcube Gudiance
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_1_4">
+<span class="md-nav__icon md-icon"></span>
+            Earthcube Gudiance
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../information-for-repositories-and-users/science-on-schema/earthcube-gudiance/geocodesSearchProfile/">
+<span class="md-ellipsis">
+    Metadata Profile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../information-for-repositories-and-users/science-on-schema/earthcube-gudiance/collections-ro-crate/">
+<span class="md-ellipsis">
+    Collections Profile
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../information-for-repositories-and-users/science-on-schema/earthcube-gudiance/MetadataPublicationOnTheWeb/">
+<span class="md-ellipsis">
+    Considerations for publishing metadata for web harvesting.
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://github.com/ESIPFed/science-on-schema.org">
+<span class="md-ellipsis">
+    Science on Schema Guidance
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    User Interface
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            User Interface
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Facetsearch
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Facetsearch
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://geocodes.earthcube.org/#/landing">
+<span class="md-ellipsis">
+    UI
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://github.com/earthcube/facetsearch">
+<span class="md-ellipsis">
+    repository
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Resource Management
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Resource Management
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    JSONLD Forms
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_3_1">
+<span class="md-nav__icon md-icon"></span>
+            JSONLD Forms
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://addto.earthcube.org">
+<span class="md-ellipsis">
+    UI
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://github.com/earthcube/jsonld_forms">
+<span class="md-ellipsis">
+    repository
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Developers
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Developers
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Services Infrastructure
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+            Services Infrastructure
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/">
+<span class="md-ellipsis">
+    How To Create a Geocodes Server
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_1">
+<span class="md-nav__icon md-icon"></span>
+            How To Create a Geocodes Server
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/stack_machines/">
+<span class="md-ellipsis">
+    List of services
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Setup
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_2">
+<span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_2_1" id="__nav_4_1_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Services
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_2_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_1_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Services
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/setting_up_services/setup_base_machine_configuration/">
+<span class="md-ellipsis">
+    Base Machine
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/setting_up_services/setup_geocodes_services_containers/">
+<span class="md-ellipsis">
+    Create Services Containers
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/setting_up_services/setup_gleaner_container/">
+<span class="md-ellipsis">
+    Create Gleaner Containers
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_2_2" id="__nav_4_1_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Test Data
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_2_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_1_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Test Data
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/data_loading/indexing_with_gleanerio_for_testing/">
+<span class="md-ellipsis">
+    Load Data
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_2_3" id="__nav_4_1_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    User Interface
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_2_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_1_2_3">
+<span class="md-nav__icon md-icon"></span>
+            User Interface
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/setting_up_user_interface/setup_geocodes_ui_containers/">
+<span class="md-ellipsis">
+    Create Geocodes UI Containers
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/setting_up_user_interface/tenant">
+<span class="md-ellipsis">
+    Creating a Community Instance (Tenant)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Load Data
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_3">
+<span class="md-nav__icon md-icon"></span>
+            Load Data
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/data_loading/setup_indexing_with_gleanerio/">
+<span class="md-ellipsis">
+    Load Data
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/data_loading/configuration">
+<span class="md-ellipsis">
+    Configuration Examples
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/data_loading/onboarding_or_testing_a_datasource/">
+<span class="md-ellipsis">
+    Onboarding
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/data_loading/dataloading_troubleshooting/">
+<span class="md-ellipsis">
+    Data Loading Trouble shooting
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/data_loading/using_screen_for_manual_loading/">
+<span class="md-ellipsis">
+    Manual Loading with screen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/data_loading/watching_manual_gleanerio_data_loading/">
+<span class="md-ellipsis">
+    Data Loading - Watching CLI/Manual Loading
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Production
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_4">
+<span class="md-nav__icon md-icon"></span>
+            Production
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/production">
+<span class="md-ellipsis">
+    Production
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/production/creatingAndLoadingProduction/">
+<span class="md-ellipsis">
+    Creating and Loading Production
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/production/managing_services/">
+<span class="md-ellipsis">
+    Manage Services
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/data_loading/onboarding_or_testing_a_datasource/">
+<span class="md-ellipsis">
+    Testing/Onboarding a Datasource
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/production/production_ui_deployment/">
+<span class="md-ellipsis">
+    Production UI DNS changes
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Tooling
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_5">
+<span class="md-nav__icon md-icon"></span>
+            Tooling
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/data_loading/install_glcon/">
+<span class="md-ellipsis">
+    Install Glcon
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_5_2" id="__nav_4_1_5_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Earthcube Utilities
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_5_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_4_1_5_2">
+<span class="md-nav__icon md-icon"></span>
+            Earthcube Utilities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/https:/earthcube.github.io/earthcube_utilities">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/https:/earthcube.github.io/earthcube_utilities/earthcube_utilities">
+<span class="md-ellipsis">
+    Earthcube Utilities
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/https:/earthcube.github.io/earthcube_utilities/summarize">
+<span class="md-ellipsis">
+    Summarize
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/development/">
+<span class="md-ellipsis">
+    Development
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_6">
+<span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/development/local_stacks/">
+<span class="md-ellipsis">
+    Local Stacks
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/docs/development/localdeveloper_configs.md">
+<span class="md-ellipsis">
+    Configuration examples (TBD)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_7" id="__nav_4_1_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Help
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_7">
+<span class="md-nav__icon md-icon"></span>
+            Help
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/production/sparql/">
+<span class="md-ellipsis">
+    Some SPARQL Queries
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/troubleshooting/">
+<span class="md-ellipsis">
+    Troubleshooting
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Ingest Orchestration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Ingest Orchestration
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../developers/ingest-orchestration/">
+<span class="md-ellipsis">
+    Gleaner IO Scheduler
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Gleaner IO Scheduler
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/ingest-orchestration/quick/">
+<span class="md-ellipsis">
+    Quick
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/ingest-orchestration/add_containers/">
+<span class="md-ellipsis">
+    Add Containers
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/ingest-orchestration/eco_deploy/">
+<span class="md-ellipsis">
+    Scheduler Deployment
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Earthcube Utilities
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Earthcube Utilities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://earthcube.github.io/earthcube_utilities/">
+<span class="md-ellipsis">
+    Overview
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://earthcube.github.io/earthcube_utilities/earthcube_utilities/">
+<span class="md-ellipsis">
+    Earthcube Utilities
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://earthcube.github.io/earthcube_utilities/summarize/">
+<span class="md-ellipsis">
+    Summarize
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Indexing
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Indexing
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Load Data
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_1">
+<span class="md-nav__icon md-icon"></span>
+            Load Data
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../geocodes/docs/data_loading/install_glcon/">
+<span class="md-ellipsis">
+    Install tool glcon
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../geocodes/docs/data_loading/setup_indexing_with_gleanerio/">
+<span class="md-ellipsis">
+    Load Data
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../metadata/integrationtesting/">
+<span class="md-ellipsis">
+    Tools
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_2_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../indexing/tools/gleaner-docs/">
+<span class="md-ellipsis">
+    Gleaner Docs
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_5_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Gleaner Docs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_2_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2_1_2" id="__nav_5_2_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Running
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_2_1_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_5_2_1_2">
+<span class="md-nav__icon md-icon"></span>
+            Running
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../indexing/tools/gleaner-docs/quickstart/">
+<span class="md-ellipsis">
+    Quick Start
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../indexing/tools/gleaner-docs/cli/">
+<span class="md-ellipsis">
+    CLI
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../indexing/tools/gleaner-docs/dockercli/">
+<span class="md-ellipsis">
+    Docker CLI
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../indexing/tools/gleaner-docs/config/">
+<span class="md-ellipsis">
+    Configuration
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_2_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2_1_4" id="__nav_5_2_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Applications
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_2_1_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_5_2_1_4">
+<span class="md-nav__icon md-icon"></span>
+            Applications
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../indexing/tools/gleaner-docs/gleaner/">
+<span class="md-ellipsis">
+    Gleaner
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../indexing/tools/gleaner-docs/nabu/">
+<span class="md-ellipsis">
+    Nabu
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../indexing/tools/gleaner-docs/faircontext/">
+<span class="md-ellipsis">
+    Communities and Fair
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Contributing
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Contributing
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+<span class="md-ellipsis">
+    General Developer Information
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_1">
+<span class="md-nav__icon md-icon"></span>
+            General Developer Information
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/addingdocumentation/">
+<span class="md-ellipsis">
+    notes on adding documentation
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/communiity-info/">
+<span class="md-ellipsis">
+    About the NSF Earthcube Community Infrastructure
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/contributing/">
+<span class="md-ellipsis">
+    Contribution Guidelines
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_1_4" id="__nav_6_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Services infrastructure
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_1_4">
+<span class="md-nav__icon md-icon"></span>
+            Services infrastructure
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/development_notes/">
+<span class="md-ellipsis">
+    Notes on issues
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/install_minio_client/">
+<span class="md-ellipsis">
+    minio client
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_1_4_3" id="__nav_6_1_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Development
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_4_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_6_1_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/development/localdeveloper_configs/">
+<span class="md-ellipsis">
+    Production configuration settings.
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1_4_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/ecrr/">
+<span class="md-ellipsis">
+    Ecrr
+  </span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_4_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_6_1_4_4">
+<span class="md-nav__icon md-icon"></span>
+            Ecrr
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_1_4_5" id="__nav_6_1_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Setting up services
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_4_5_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_6_1_4_5">
+<span class="md-nav__icon md-icon"></span>
+            Setting up services
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/setting_up_services/setting_up_aws/">
+<span class="md-ellipsis">
+    Setting up Geocodes Services on AWS
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/setting_up_services/setup_aws_neptune/">
+<span class="md-ellipsis">
+    Setup aws neptune
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/services-infrastructure/setting_up_services/setup_docker_swarm/">
+<span class="md-ellipsis">
+    intial notes on setting up a docker swarm on aws
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_1_5" id="__nav_6_1_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Ingest orchestration
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_1_5">
+<span class="md-nav__icon md-icon"></span>
+            Ingest orchestration
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/ingest-orchestration/alternatives/">
+<span class="md-ellipsis">
+    Alternative Approaches
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/ingest-orchestration/refactor/">
+<span class="md-ellipsis">
+    refactoring
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_1_5_3" id="__nav_6_1_5_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Assets
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_5_3_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_6_1_5_3">
+<span class="md-nav__icon md-icon"></span>
+            Assets
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1_5_3_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../developers/ingest-orchestration/assets/configs/">
+<span class="md-ellipsis">
+    Configs
+  </span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_5_3_1_label" class="md-nav" data-md-level="5">
+<label class="md-nav__title" for="__nav_6_1_5_3_1">
+<span class="md-nav__icon md-icon"></span>
+            Configs
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_1_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_1_5_4" id="__nav_6_1_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Images
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_1_5_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_6_1_5_4">
+<span class="md-nav__icon md-icon"></span>
+            Images
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../developers/ingest-orchestration/images/appendix/">
+<span class="md-ellipsis">
+    Appendix
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://github.com/earthcube">
+<span class="md-ellipsis">
+    Repositories
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deploy">
+<span class="md-ellipsis">
+      Deploy
+    </span>
+</a>
+<nav aria-label="Deploy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deploy-dagster-in-portainer">
+<span class="md-ellipsis">
+      Deploy Dagster in Portainer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deploy-local">
+<span class="md-ellipsis">
+      Deploy Local
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-network-builder">
+<span class="md-ellipsis">
+      Implementation network builder
+    </span>
+</a>
+<nav aria-label="Implementation network builder" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#automated-ci-build">
+<span class="md-ellipsis">
+      AUTOMATED CI Build
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#local-development">
+<span class="md-ellipsis">
+      LOCAL DEVELOPMENT
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compose-environment-and-docker-api-assets">
+<span class="md-ellipsis">
+      Compose, Environment and Docker API Assets
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notes">
+<span class="md-ellipsis">
+      Notes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="eco-scheduler-notes">ECO Scheduler Notes<a class="headerlink" href="#eco-scheduler-notes" title="Permanent link"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>these will need to become the gleanerio scheduler documentation. 
+for now these are rough. Images and graphics need to be loaded</p>
+</div>
+<pre class="mermaid"><code>flowchart TB
+Postgres_Container-- defined by --&gt; compose_project
+Dagit_UI_Container-- defined by --&gt; compose_project
+Dagster_Container  -- defined by --&gt; compose_project
+Headless_Container -- defined by --&gt; compose_project
+configs_volume_Container -- defined by --&gt; compose_project
+compose_project -- deployed to --&gt; docker_portainer
+
+Gleaner_container -- image manual add --&gt; docker_portainer
+Nabu_container -- image manual add --&gt; docker_portainer
+
+Gleaner_container -- deployed by --&gt; Dagster_Container
+Nabu_container -- deployed by --&gt; Dagster_Container
+
+Gleaner_container--  deployed to --&gt; docker_portainer
+Nabu_container--  deployed to --&gt; docker_portainer
+
+Dagit_UI_Container -- Created by --&gt; Github_action
+Dagster_Cotnainer -- Created by --&gt; Github_action
+
+NabuConfig.tgz -- Archive to --&gt; Nabu_container
+GleanerConfig.tfz -- Archive to --&gt; Gleaner_container
+
+NabuConfig.tgz -- Stored in s3 --&gt; s3
+GleanerConfig.tfz -- Stored in s3 --&gt; s3
+
+configs_volume_Container -- populates volume --&gt; dagster-project
+dagster-project -- has --&gt; gleanerConfig.yaml
+dagster-project -- has --&gt; nabuConfig.yaml
+</code></pre>
+<h2 id="deploy">Deploy<a class="headerlink" href="#deploy" title="Permanent link"></a></h2>
+<h3 id="deploy-dagster-in-portainer">Deploy Dagster in Portainer<a class="headerlink" href="#deploy-dagster-in-portainer" title="Permanent link"></a></h3>
+<p>You will need to deploy dagster contiainers to portainer, for a docker swarm</p>
+<ol>
+<li>Pull scheduler repo</li>
+<li>cd dagster/implnets/deployment</li>
+<li>create a copy of envFile.env and edit env variables</li>
+<li>pull images for nabu and gleaner
+   <code>GLEANERIO_GLEANER_IMAGE=nsfearthcube/gleaner:latest</code> and 
+   <code>GLEANERIO_NABU_IMAGE=nsfearthcube/nabu:latest</code></li>
+<li>as noted as noted in (Compose, Environment and Docker API Assets), deploy the configuration to s3. </li>
+<li>create network and volumes needed <code>dagster_setup_docker.sh</code></li>
+<li>create a stack, from compose_project.yaml, with the env variables you set</li>
+</ol>
+<h3 id="deploy-local">Deploy Local<a class="headerlink" href="#deploy-local" title="Permanent link"></a></h3>
+<p>this runs a local compose</p>
+<ol>
+<li>cd dagster/implnets</li>
+<li><code>make eco-clean</code>and <code>make eco-generate</code></li>
+<li>cd dagster/implnets/deployment </li>
+<li>run dagster_setup_docker.sh </li>
+<li>run dagster_localrun.sh</li>
+</ol>
+<h2 id="implementation-network-builder">Implementation network builder<a class="headerlink" href="#implementation-network-builder" title="Permanent link"></a></h2>
+<p>The work for building the dagster containers for a given implementation network starts in 
+the directory <code>scheduler/dagster/implnets</code>.  This has been automated for CI
+For local development, At this time most of this can be driven by
+the Makefile</p>
+<h3 id="automated-ci-build">AUTOMATED CI Build<a class="headerlink" href="#automated-ci-build" title="Permanent link"></a></h3>
+<p>The containers are now built by a github action, and stored in the
+<a href="https://hub.docker.com/repositories/nsfearthcube">nsf earhtcube dockerhub</a></p>
+<ol>
+<li>Make sure your gleanerconfig.yaml file is in the configs/NETWORK directory where
+   NETWORK is your implmentation network like eco, iow, etc. </li>
+<li>if on a branch that you want to build, be sure the branch is in to <a href="../.github/workflows/contanerize.yaml">github action</a></li>
+<li>increment VERSION, and commit. </li>
+<li>watch <a href="https://github.com/earthcube/scheduler/actions">actions</a></li>
+</ol>
+<h3 id="local-development">LOCAL DEVELOPMENT<a class="headerlink" href="#local-development" title="Permanent link"></a></h3>
+<ol>
+<li>Make sure your gleanerconfig.yaml file is in the configs/NETWORK directory where NETWORK is your implmentation network like eco, iow, etc. </li>
+<li>Check the VERSION file and make sure it has a value you want in it to be tagged to the containers.</li>
+<li><code>make eco-clean</code>  will remove any existing generated code from the ./generatedCode/implnet-NETWORK directory</li>
+<li><code>make eco-generate</code> will build the code new.  Set the -d N in the makefile to a value N that is the number
+   of days you want the runs to cycle over.  So 30 would mean they run once every 30 days.  If you want some providers
+   to index at different rates you currently need to go in and edit the associated provider <em>schedules</em> file editing the
+   line <code>@schedule(cron_schedule="0 12 * * 6", job=implnet_job_amgeo, execution_timezone="US/Central")</code> with a 
+   cron value you want.</li>
+<li><code>make eco-build</code> builds the Docker images following the build file ./build/Docker file.  Note this uses the 
+   command line argument <code>--build-arg implnet=eco</code> to set the implementation NETWORK so that the correct build code 
+   from <em>generatedCode/NETWORK</em> is copied over</li>
+</ol>
+<h2 id="compose-environment-and-docker-api-assets">Compose, Environment and Docker API Assets<a class="headerlink" href="#compose-environment-and-docker-api-assets" title="Permanent link"></a></h2>
+<ol>
+<li>You will need the (or need to make) the portainer access token 
+    from your https://portainer.geocodes-aws-dev.earthcube.org/#!/account</li>
+<li>You will need a valid Gleaner configuration file named gleanerconfig.yaml and a nabu config named nabuconfig.yaml </li>
+<li>You will need the schema.org context files places in a directory <em>assets</em>  get each of the http and https versions</li>
+<li><code>wget https://schema.org/version/latest/schemaorg-current-https.jsonld</code></li>
+<li><code>wget https://schema.org/version/latest/schemaorg-current-http.jsonld</code></li>
+<li>Generate the archive files for Gleaner and Nabu.  Note the path to the context files should map with what is in the configuration files</li>
+<li><code>tar -zcf ./archives/NabuCfg.tgz ./nabuconfig.yaml ./assets</code></li>
+<li><code>tar -zcf ./archives/GleanerCfg.tgz ./gleanerconfig.yaml ./assets</code></li>
+<li>The archives .tgz files named <em>NabuCfg.tgz</em> and <em>GleanerCfg.tgz</em> need to be copied to the schedule prefix
+   in your bucket used for Gleaner</li>
+<li><code>mc cp GleanerCfg.tgz NabuCfg.tgz  gleaner/scheduler/configs</code></li>
+<li>Make sure GLEANERIO_NABU_ARCHIVE_OBJECT and GLEANERIO_GLEANER_ARCHIVE_OBJECT reflect this location in the .env file</li>
+<li>Next you will need to build the scheduler containers for your implementation network. Push these containers
+   to your container registry of choice and make sure the values are set in the .env file and that
+   the containers are available to Portainer or will get pulled on use.   These are the image files in the 
+   compose file and also the images notes in the environment variables GLEANERIO_GLEANER_IMAGE and GLEANERIO_NABU_IMAGE
+   in the .env file.</li>
+</ol>
+<p>At this point you are ready to move to your Docker or Portainer environment and deploy the 
+compose and environment files.  </p>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link"></a></h2>
+<ol>
+<li>I do not have the API call to ensure/check/pull and image used by the API, so these images need to be 
+   pulled down manually at this time.  These are the images noted by the .env files at 
+   <code>GLEANERIO_GLEANER_IMAGE=nsfearthcube/gleaner:latest</code> and 
+   <code>GLEANERIO_NABU_IMAGE=nsfearthcube/nabu:latest</code></li>
+</ol>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.tabs", "navigation.path", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+window.mermaidConfig = {default: {
+    startOnLoad: false
+}};</script></body>
+</html>
